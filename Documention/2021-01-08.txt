@@ -1,0 +1,103 @@
+        
+         ***************JAVASCRIPT**********
+
+     -Machine independent
+     -object-oriented lang
+     - Untyped lang.
+     - Provide Complit Validation
+     - client side
+     -two types 1> internal js - with write code in html code and used script tag.
+                2> external js - used external js
+                   
+
+
+        
+        ******** JAVASCRIPT Variables*******       
+         
+        Variables: Javascript Variables are container for storing data values.
+        
+        
+                var a = 1;  ->Assign value
+
+        
+               var a ;       ->Undefined Value
+        
+        
+        ************JAVASCRIPT VARIABLES*************
+             *****Number,String ,Boolean,Null ,Undefined******
+
+  1.String:
+
+ let firstName="Harsh"
+ let lastName="Darji"
+
+ let fullName=firstName+' '+lastName
+
+ console.log('The username is:'+fullName);          
+
+  2.Number:
+
+let salary=10000
+let bonus=5000
+
+let totalsalary=salary+bonus
+
+console.log(fullName+' got a total salary of:'+totalsalary);
+
+3.Boolean:
+
+//Boolean can only have two value: true or false
+
+let isMarried=false         //if you write False you will get error
+let isAuthenticated=true
+let isLoggedIn=true
+
+console.log(`${fullName} is married : ${isMarried}`);
+console.log(`${fullName} is authenticated : ${isAuthenticated}`);
+console.log(`${fullName} is married : ${isLoggedIn}`);
+
+4. undefined:
+//Undefined-Variables that are declared but not initialized are undefined
+let adminName;
+
+console.log(adminName); //get undefined because you will not initialized.
+
+adminName='Harsh'
+console.log(adminName);
+5. Null:
+//nothing yet value
+adminName=null
+console.log(adminName);
+
+      ************** BASIC DATATYPE JAVASCRIPT*******************
+
+      -Datatypes are automatically assigned to Variables.
+
+   **  name="nakul"
+       marks=100
+       isHonest=true
+       salaryEarned
+       won=null
+   
+   ** 
+       console.log(typeof(name)==='string');
+       console.log(typeof(marks)==='number');
+       console.log(typeof(isHonest)==='boolean');
+       console.log(typeof(salaryEarned)==='undefined');
+       console.log(typeof(won)==='object');
+
+
+                ***********OPERATORS*********
+
+       Operators: Used assign valus , compare value ,perform arithmatic opertions.
+
+      **
+       Arithmetic operators are used to perform arithmetic on numbers:
++	         -Addition
+-            -Subtraction
+*            -Multiplication
+**	         -Exponentiation (ES2016)
+/	         -Division
+%	         -Modulus (Division Remainder)
+++	         -Increment
+--	         -Decrement   
