@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Page</title>
+    <link rel="stylesheet" href="user.css">
+</head>
+<body>
+  
+     <header>
+     <h3 id="adminName">Hello,[name]</h3>
+      <div class="user">
+     
+       
+         <p><a href="dashboard.html">Dashboard</a><p>
+         <p><a href="user.html">Users</a></p> 
+         <p><a href="usersession.html">Login Session</a><p>
+         <p><a href="login.html">Logout</a></p>
+     
+     </div>
+      </header>
+      <main>
+      <h2>Add User</h2>
+      <section class="form">
+       <form action="" id="userForm">
+          <div id="fill">
+          <input type="text" name="name" id="name" placeholder="Name">
+          <input type="email" name="email" id="email" placeholder="Email">
+          <input type="password" name="password" id="password" placeholder="Password">
+          <input type="text" name="birthdate" id="birthdate" placeholder="Birthdate(dd/mm/yyyy">
+        </div>
+
+        <div class="r1">
+            <button type="submit" id = "btn1">Add User</button>
+        </div>
+      </form>
+      <div class="r1">
+          <button type="submit" id = "btn2">Update User</button>
+      </div>
+      </section>
+     
+   <section class="table">
+       <h2>User List</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Password</th>
+                <th>Birthdate</th>
+                <th>Age</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody id="tbody">
+
+        </tbody>
+    </table>
+   </section>
+</main>
+
+
+<script src="user.js"></script>
+</body>
+</html>

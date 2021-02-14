@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dashboard page</title>
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+    <header>
+    <h2 id="adminName">Hello,[name]</h2>
+  <div class="dashboard">
+    <ul>
+        <hr>
+        <p><a href="dashboard.html">Dashboard</a></p>
+        <hr>
+        <p><a href="user.html">User</a></p>
+        <hr>
+        <p><a href="usersession.html">Login Session</a></p>
+        <hr>
+        <p><a href="login.html">Logout</a><p>
+        <hr>
+    </ul>
+  </div>
+</header>
+<main>
+    <h2>Dashboard</h2>
+    <section id="user">
+      <div id="block1">
+          <h3> User < 18 years </h3>
+          <p class="usertext" id="lessthan18"> 0 Users</p>
+      </div>
+      <div id="block2">
+        <h3> 18-50 years Users </h3>
+        <p class="usertext" id="between"> 0 Users</p>
+    </div>
+    <div id="block3">
+        <h3> User < 50 years </h3>
+        <p class="usertext" id="morethan50"> 0 Users</p>
+    </div>
+  </section>
+  <h3 id="h3" style="text-align: center; display: none;">Today's is ABC Birthday</h3>
+</main>
+<script src="dashboard.js"></script>
+</body>
+</html>
