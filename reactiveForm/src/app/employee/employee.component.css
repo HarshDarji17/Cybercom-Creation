@@ -1,0 +1,43 @@
+ #heading {
+    text-align: center;
+    margin-top: 5px;
+    font-weight: bold;
+    color: black;
+    margin: 10px 0 30px 0;
+}
+
+#form {
+    width: 50%;
+    border: 2px solid black;
+    border-radius: 20px;
+    background-color: silver;
+    margin-top: 10px;
+}
+
+label {
+    font-family: 'sans-serif', Times, serif;
+    font-weight: bold;
+}
+
+.form-control.ng-touched.ng-invalid{
+    border: 2px solid rgb(56, 56, 73);
+   
+}
+
+.form-control.ng-touched.ng-valid{
+    border:2px solid  rgb(24, 24, 44); 
+}
+
+#require::after {     
+    content: " *";     
+    color:orange; 
+}
+
+.btn {
+    width: 150px;
+    margin-top: 10px;
+    border-radius: 3px;
+} 
+input,textarea{
+    width:400px;
+}
