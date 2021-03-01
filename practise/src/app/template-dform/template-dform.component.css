@@ -1,0 +1,10 @@
+h3 {
+    text-align: center;
+}
+.form-control.ng-touched.ng-invalid{
+    border: 2px solid rgb(49, 45, 45);
+}
+
+.form-control.ng-touched.ng-valid{
+    border: 2px solid green;
+}

@@ -1,0 +1,97 @@
+***pass Data To Child Component:
+  Make my Compponent
+  Make it child of app Component
+  pass dta to app to chiled Compponent
+  display data in child Component
+
+***Send data child to parent Component:
+  make mycompo.
+  use it inside app compo. as child
+  pass data from child to parent with EventEmitter  
+
+***What is pipe:
+  pipe with string
+  pipe with date
+  pipe with slice
+  pipe with currency
+  etc    {{ slice | opeeration}}
+
+ ***Route Guards In Angular:
+  *CANACTIVATE:
+  This Helps to decide whether the route can br activated or not. it use to checks to see if a user can visit a route
+  
+  *CANDEACTIVATE:
+   Sometimes, We have a condition where we want the user to confirm if he really wants to navigate from the Component
+    We can use CANDEACTIVATE route guard method.
+
+  *CANACTIVATECHILD:
+    THis helps to decide whether child routs can be activatetd or not. it use to checks to see if a user can visite 
+    a routs child. 
+  
+
+***Custom Directive:
+ example of custom Directive
+ how to make custome Directive 
+ run command: ng g Directive custom-style
+
+ *** API
+    make service     user service
+    fetch api data in service    
+    import in Component also  ,service mport in component
+      get data in component.
+      make table in html file
+      use for loop for render data with table.
+
+*** What is MOdel?{
+  name:'harsh'  defind datatype and also validation 
+}
+ - typescript functionality.
+ - defind data stucture        
+ -make , use  with model with othher file
+ -use model with component file
+ -use model with service file      
+ 
+***Recape and Routing:
+     make module (users)
+     component inside module(login, signup)
+     show module component
+     add routing and routing links(app.html)
+     add module and routing
+
+***  routing module:
+     make module with routing file( m=admin , com. = login , list ,create the admin  routing file) 
+     define routing inside module
+     used for adimn and user pannel.....
+     make routing link(app.html)    
+
+*** group Routing:
+     make one more module and route for it ( m=user , compo =  login , list and user routing file)
+     make grouped route ( path set to children ( path: 'user' , children[{ path : , component: }])) as it is admin
+     make routing link (app.html (routerlink(user/login as it list)))
+
+*** Lazy Loading:
+     make a routing modules -admin and user
+     make  a two component both modules (login , list)
+     use module in lazy Loading way  :  simple give the path in module { path : login , compo:loc }
+     make routing  :  not import module in app.modules.ts and app routing 
+                                        { path : 'admin'
+                                          load children:()=>('import admin module path').then(mod=>mod.AdminMOdule)
+                                        } as it user in app routing file
+     make routing link: app.html (routerLink="admin/login")
+
+*** Lazy Loading Component:
+    make two components userlist and adminlist
+    make 2 button for loading component
+    write component loading function  
+
+*** Template Driven Form 
+    import form module in app.module file
+    write html form in component.html file
+    Get data in component.ts file.
+
+
+*** Import Reactive Form module
+    make html form
+    define form group
+    get form value
+    apply value           

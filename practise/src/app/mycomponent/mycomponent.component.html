@@ -1,0 +1,123 @@
+<!-- <h1>Property Binding in Angular</h1>
+<input type="text" [disabled] = 'disabledbox' [value]="name"> //Property Binding handle disable value
+<br><br>
+<input type="text"  disabled = {{disabledbox}} value={{name}}> //interpollation not handled disable value
+<br><br>
+<button (click)= "enablebox()">Enable textBox</button> 
+
+<h1>Condition in Angular</h1>
+
+<h1 *ngIf = "show == 'false'; then ifblock elseblock"></h1>
+
+<ng-template #ifblock>
+    <h1> if block</h1>
+</ng-template>
+
+<ng-template #elseblock>
+    <h1>else block</h1>
+</ng-template>
+
+<ng-template [ngIf] = " show== 'red' ">
+     <h1>red block</h1>
+</ng-template>
+
+<ng-template [ngIF] = "show== 'green'">
+    <h1>green block</h1>
+
+</ng-template>
+
+
+<ng-template [ngIF] = "show== 'green'">
+    <h1>green block</h1>
+
+</ng-template>
+
+<h1>Swichcase</h1>
+<div [ngSwitch] = "color">
+    <h2 style= "color: red;" *ngSwitchCase= "'red'">
+        red color
+    </h2>
+    <h2 *ngSwitchCase="'green'">
+        grreen color
+    </h2>
+    <h2 *ngSwitchCase="'yellow'">
+       yellow color
+    </h2>
+    
+</div> -->
+
+<!-- 
+<h1>Simple Form In Angular</h1>
+
+<form #simpleform = "ngForm" (ngSubmit)="getUserValue(simpleform.value)" >
+
+    <input type="text"  ngModel name="username" placeholder="enter username"><br><br>
+    <input type="text"  ngModel name="age" placeholder="enter age"><br><br>
+    <input type="text"  ngModel  name="addres" placeholder="enter addres"><br><br>
+    <input type="password"  ngModel  name="passsword" placeholder="enter password"><br><br>
+
+    <button>Get User Value</button>
+
+</form> -->
+
+
+
+<!-- 
+   <h1>Style Binding in A Angular</h1> 
+
+
+   <h1 style="color: orange"> Header 1</h1>
+
+   <h1 [style.color]='"yellow"'> Header 1</h1>
+
+   <h1 [style.color]= " color "> Dynamic Style</h1>
+
+
+   <h1 [style.color]= "error? 'green':'red' "> Conditional  Style</h1>
+
+   <button (click)="updatecolor()">Updatte color</button> -->
+
+<!-- 
+<h3>child component</h3>
+<h4>{{hero.name}}</h4>
+<h4>{{hero.age}}</h4>  used for array type data come to parent side -->
+
+<!-- 
+<h3>child compo.</h3>
+
+<button (click)="senddata()">send data to parent component</button> -->
+
+
+<!-- 
+<h1>for loop in angular</h1>
+   <table border="1">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Branch</th>
+            <th>DOB</th>
+            <th>Gender</th>
+            <th>Index</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor= "let student of students;let i =index">
+          <td>{{student.ID}}</td>
+          <td>{{student.FirstName}}</td>
+          <td>{{student.LastName}}</td>
+          <td>{{student.Branch}}</td>
+          <td>{{student.DOB}}</td>
+          <td>{{student.Gender}}</td>
+          <td>{{i}}</td>
+      </tr> 
+      </tbody> -->
+
+       <!-- <tr *ngFor="let item of data">
+           <td>{{ item.name}}</td>
+           <td>{{item.age}}</td>
+       </tr> -->
+   <!-- </table> -->
+
+  
