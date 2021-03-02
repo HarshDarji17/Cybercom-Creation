@@ -1,0 +1,50 @@
+.required {
+    color: red;
+}
+
+#date, #email {
+    width: 270px;
+}
+
+input{
+    border-radius: 0;
+}
+#form {
+    width: 50%;
+    border: 2px solid black;
+    border-radius: 20px;
+    background-color: silver;
+    margin-top: 10px;
+}
+#name, #contact {
+    display: inline-flex;
+}
+
+h5 {
+    margin-top: 20px;
+}
+
+label {
+    font-size: 12px;
+}
+
+#lbl {
+    margin-left: 10px;
+    font-size: 14px;
+}
+
+#participants {
+    width: 120px;
+}
+
+#nm, #code {
+    margin-right: 30px;
+}
+
+#code {
+    width: 70px;
+}
+
+#number {
+    width: 170px;
+}
