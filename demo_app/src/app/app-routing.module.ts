@@ -1,3 +1,5 @@
+import { RegistrationdetailsComponent } from './registrationdetails/registrationdetails.component';
+import { CruiseFormComponent } from './cruise-form/cruise-form.component';
 
 import { PageComponent } from './page/page.component';
 import { NgModule, Component } from '@angular/core';
@@ -8,6 +10,7 @@ import { ProductsModule } from './modules/products/products.module';
 import { CmsModule } from './modules/cms/cms.module';
 import {LoginComponent} from './login/login.component';
 import {AvtivateGuard} from './core/services/auth/avtivate.guard';
+
 
 
 const routes: Routes = [
@@ -40,6 +43,13 @@ const routes: Routes = [
     component:LoginComponent 
   },
 
+  { path:'cruiseform' , component:CruiseFormComponent},
+
+
+  { path: "registrationdetails" , component:RegistrationdetailsComponent},
+
+
+ 
 
   {
     path:'page' , component:PageComponent ,   canActivate : [AvtivateGuard]

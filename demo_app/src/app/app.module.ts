@@ -1,3 +1,4 @@
+import { DataService } from './core/services/data/data.service';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
@@ -19,6 +20,10 @@ import {LoginComponent} from './login/login.component';
 import { AvtivateGuard} from './core/services/auth/avtivate.guard';
 import {AuthenticationService} from './core/services/auth/authentication.service';
 import {CandeactivateGuard} from './core/services/deactivate/candeactivate.guard';
+import { CruiseFormComponent } from './cruise-form/cruise-form.component';
+
+import { ChildComponent } from './child/child.component';
+import { RegistrationdetailsComponent } from './registrationdetails/registrationdetails.component';
 
 
 
@@ -32,6 +37,9 @@ import {CandeactivateGuard} from './core/services/deactivate/candeactivate.guard
     HomeComponent,
     PageComponent,
     LoginComponent,
+    CruiseFormComponent,
+    ChildComponent,
+    RegistrationdetailsComponent,
 
   ],
   imports: [
@@ -47,7 +55,7 @@ import {CandeactivateGuard} from './core/services/deactivate/candeactivate.guard
     ReactiveFormsModule
 
   ],
-  providers: [UserListService, AvtivateGuard,AuthenticationService,CandeactivateGuard],
+  providers: [UserListService, AvtivateGuard,AuthenticationService,CandeactivateGuard,DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
