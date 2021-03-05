@@ -24,6 +24,11 @@ import { CruiseFormComponent } from './cruise-form/cruise-form.component';
 
 import { ChildComponent } from './child/child.component';
 import { RegistrationdetailsComponent } from './registrationdetails/registrationdetails.component';
+import { RegisterformComponent } from './registerform/registerform.component';
+import { AesEncryptDecryptComponent } from './aes-encrypt-decrypt/aes-encrypt-decrypt.component';
+
+import { ClipboardModule } from 'ngx-clipboard';
+
 
 
 
@@ -40,6 +45,9 @@ import { RegistrationdetailsComponent } from './registrationdetails/registration
     CruiseFormComponent,
     ChildComponent,
     RegistrationdetailsComponent,
+    RegisterformComponent,
+    AesEncryptDecryptComponent,
+    
 
   ],
   imports: [
@@ -52,7 +60,8 @@ import { RegistrationdetailsComponent } from './registrationdetails/registration
     ProductsModule,
     UsersModule ,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    ClipboardModule
 
   ],
   providers: [UserListService, AvtivateGuard,AuthenticationService,CandeactivateGuard,DataService],

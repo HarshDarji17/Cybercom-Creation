@@ -1,0 +1,24 @@
+h5 {
+    margin: 5px auto;
+    font-family:  sans-serif;
+}
+.container{
+    display: block;
+}
+.card-title {
+    width: 30%;
+}
+.card-header {
+    background-color: #24a0ed;
+    color: white;
+    width: 100%;
+}
+
+label {
+    font-weight: bold;
+   
+}
+button {
+    margin-left: 20px;
+   
+}

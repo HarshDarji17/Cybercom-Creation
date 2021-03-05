@@ -1,3 +1,5 @@
+import { AesEncryptDecryptComponent } from './aes-encrypt-decrypt/aes-encrypt-decrypt.component';
+import { RegisterformComponent } from './registerform/registerform.component';
 import { RegistrationdetailsComponent } from './registrationdetails/registrationdetails.component';
 import { CruiseFormComponent } from './cruise-form/cruise-form.component';
 
@@ -10,6 +12,7 @@ import { ProductsModule } from './modules/products/products.module';
 import { CmsModule } from './modules/cms/cms.module';
 import {LoginComponent} from './login/login.component';
 import {AvtivateGuard} from './core/services/auth/avtivate.guard';
+
 
 
 
@@ -47,6 +50,11 @@ const routes: Routes = [
 
 
   { path: "registrationdetails" , component:RegistrationdetailsComponent},
+
+
+  { path:"reg" , component : RegisterformComponent},
+
+  { path:"aes" , component :AesEncryptDecryptComponent},
 
 
  
