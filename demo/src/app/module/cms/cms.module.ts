@@ -1,8 +1,9 @@
 
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+
 import { CmsComponent } from './cms.component';
 import { CmsRoutingModule } from './cms-routing.module';
+import { CommonModule } from '@angular/common';
 
 
 @NgModule({
@@ -12,4 +13,5 @@ import { CmsRoutingModule } from './cms-routing.module';
     CmsRoutingModule
   ]
 })
+
 export class CmsModule { }
