@@ -1,0 +1,83 @@
+<p>directivve works!</p>
+
+<h1>directive in angular</h1>
+    <!--- Heading-->
+<h3>ngif with then and else</h3>
+
+   <!---radio btn-->
+<input type="radio" name="radio1" (click)="changevalue(true)">true
+<input type="radio" namw="radio2" (click)="changevalue(false)">false
+
+   <!-- If con. is true thenblock execute neither elseblock eexecute-->
+<div *ngIf="isvalid ;  then thenblock ; else elseblock"></div>
+
+      <!--- thenblock-->
+
+      <ng-template #thenblock>
+         <div>this is valid data - then block</div>
+      </ng-template>
+
+      <!--- elseblock-->
+    <ng-template #elseblock>
+       <div>this is invalid data - else block</div>
+    </ng-template>
+
+                                                
+<!--  simple if else con.
+<div *ngIf="isvalid">
+    This is valid data
+</div>
+<div *ngIf="!isvalid">
+    This is invalid data
+</div> -->
+
+<!-- <div *ngIf="isvalid ; else elseblock">
+    This is valid data
+</div>
+<ng-template #elseblock>
+<div>
+    This is invalid data using else block
+</div>
+</ng-template> -->
+
+
+
+<h1>using ng switch</h1>
+
+   <!-- creat select drop list-->
+<select (change)="setvalue($event)">
+    <option value="">---select---</option>
+    <option value="one"> one</option>
+    <option value="two">two</option>
+    <option value="three">three</option>
+    <option value="Another"> Another</option>
+</select>
+
+    <!----use ngswitch-->
+<div [ngSwitch]="choose">
+    <h3 *ngSwitchCase="'one'"> First</h3>
+    <h3 *ngSwitchCase="'two'"> Second</h3>
+    <h3 *ngSwitchCase="'three'"> Three</h3>
+     <h3 *ngSwitchDefault>Default</h3>
+
+</div>
+
+    <!---Track by Ng For-->
+
+    <h1>Using  Track by ngFor</h1>
+    <table border= "1">
+        <tr *ngFor="let student of Students" >
+            <td>{{student.studentid}} </td> 
+            <td>{{student.name}}</td>
+            <td>{{student.age}}</td>
+            <td>{{student.course}}</td>
+              
+
+        </tr>
+    </table>
+
+    <br>
+    <button (click)="getmorestudents()"> get more students</button>
+
+
+   

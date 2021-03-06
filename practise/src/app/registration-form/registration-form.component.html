@@ -1,0 +1,229 @@
+form
+<form [formGroup]="form" class="container">
+
+    <!-- common form -->
+    <div formGroupName="cruis">
+
+        <!-- heading -->
+        <hr>
+        <h1>cruis Specifics</h1>
+        <hr>
+
+        <!-- date  -->
+
+        <div id="date">
+
+            <h5>Date and Time <span class=" required">*</span></h5>
+
+            <!-- date input -->
+            <input class="form-control" type=" datetime-local" FormControlName="date">
+
+            <label for="date"> day-month-year &nbsp; hour : minutes</label>
+
+
+            <!---date errors-->
+            <div *ngIf="date!.invalid && date!.touched" class="alert alert-danger">
+                <div *ngIf="date!.errors!.required">
+                    Date is required.
+                </div>
+
+            </div>
+        </div>
+        <!-- participants -->
+        <div>
+            <h5>No. of participants <span class="required">*</span></h5>
+
+            <!-- participants input -->
+
+            <input class="form-control" type="number" FormControlName="participants" id="participants"
+                placeholder="ex. 23">
+
+            <!-- participants errors-->
+
+            <div *ngIf="participants!.invalid && participants!.touched" class="alert alert-danger">
+                <div *ngIf="participants!.errors!.required"> participants are required.</div>
+
+            </div>
+        </div>
+    </div>
+
+    <!--food input group-->
+
+    <div formGroupName="food" class="form-Group">
+
+        <h5> Food Request</h5>
+
+        <!-- BreakFast input-->
+
+        <div>
+            <input type="checkbox" FormControlName="breakfast" value="breakfast">
+            <label id="lab" for="breakfast"> BreakFast</label>
+        </div>
+
+
+        <!--Lunch Input-->
+
+        <div>
+            <input type="checkbox" FormControlName="lunch" value="lunch">
+            <label id="lab" for="lunch"> Lunch </label>
+        </div>
+
+        <!--- dinner input-->
+        <div>
+            <input type="checkbox" FormControlName="dinner" value="dinner">
+            <label for="dinner" id=" lab"> Dinner</label>
+        </div>
+    </div>
+
+    <!--- contact option fill or not-->
+
+    <div  (change)="onChangeOption()">
+        <h5>Want to add  contact  coninformation?<span class="required">*</span></h5>
+
+        <!---Yes-->
+        <div>
+            <input type="radio" FormControlName="chooseOption" value="yes">
+            <label    id="lbl" for="yes" >Yes</label>
+        </div>
+
+        <!---No-->
+
+        <div>
+            <input type="radio" FormControlName="chooseOption" value="no">
+            <label  id="lbl" for="no" >No</label>
+
+        </div>
+
+        <!-- selectoption error-->
+        <div *ngIf="chooseOption!.invalid && chooseOption!.touched" class="alert alert-danger">
+            <div *ngIf="chooseOption!.errors!.required"> Select Option is</div>
+        </div>
+    </div>
+
+    <!-- contact input formgroup-->
+
+    <div formGroupName="contactInformation" *ngIf="chooseOption!.value=='yes'">
+
+        <!---heading-->
+        <hr>
+        <h1>Contact Information</h1>
+        <hr>
+
+        <!--- full name input group-->
+
+        <div formGroupName="fullName" class="form-Group">
+            <h5>full Name <span class="required">*</span></h5>
+
+            <!-- firstname and lastname-->
+            <div class="row">
+
+                <!---First Name-->
+                <div class="col">
+                    <input type="text" FormControlName="firstName" class="form-control">
+
+                    <label for="firstName"> First Name</label>
+
+
+                    <!--- First Name Errors-->
+
+                    <div *ngIF="firstName!.invalid && firstName!.touched" class="alert alert-danger">
+                        <div *ngIf="firstName!.errors!.required">First Name is required</div>
+                        <!-- <div *ngIf="firstName!.errors!.minlength"> Enter Minimum {{
+                            firstName!.minlength!.requiredLength}}Character.</div> -->
+                        <div *ngIf="firstName!.errors!.maxlength"> Only{{firstaName!.errors!.maxlength!.requiredLength}}
+                            Character Allowed.</div>
+                        <div *ngIf="firstName!.errors!.pattern"> Please , Enter Valid First Name.</div>
+
+                    </div>
+
+                </div>
+
+                <!--- Last NAme-->
+
+                <div class="col">
+                    <input type="text" FormControlName="lastName" class="form-control">
+                    <label for="lastName"> Last Name</label>
+
+                    div *ngIf="lastName.invalid && lastName.touched" class="alert alert-danger">
+                    <div *ngIf="lastName!.errors!.required">Last Name is required.</div>
+                    <div *ngIf="lastName!.errors!.minlength">Enter Minimum {{ lastName!.errors!.minlength!.requiredLength }}
+                        Character.</div>
+                    <div *ngIf="lastName!.errors!.maxlength">Only {{ lastName!.errors!.maxlength!.requiredLength }} Character
+                        Allowed.</div>
+                    <div *ngIf="lastName!.errors!.pattern">Please, Enter Valid Last Name.</div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- email -->
+    <div>
+        <h5>Email <span class="required">*</span></h5>
+
+        <!-- email input -->
+        <input class="form-control" type="email" formControlName="email">
+
+        <!-- email error -->
+        <div *ngIf="email && email!.invalid && email!.touched" class="alert alert-danger">
+            <div *ngIf="email!.errors!.required">Email is required.</div>
+            <div *ngIf="email!.errors!.pattern">Please, Enter Valid e-mail.</div>
+        </div>
+    </div>
+
+    <!-- phone -->
+    <div formGroupName="phone" class="form-group">
+        <h5>Phone Number <span class="required">*</span></h5>
+
+        <!-- name -->
+        <div class="row">
+
+            <!-- Area code -->
+            <div>
+                <input type="text" class="form-control" formControlName="code" id="code">
+                <label for="code">Area Code</label>
+
+                <!-- area code error -->
+                <div *ngIf="code!.invalid && code!.touched" class="alert alert-danger">
+                    <div *ngIf="code!.errors!.required">Area Code is required.</div>
+                    <div *ngIf="code!.errors!.minlength">Enter Minimum {{ code!.errors!.minlength!.requiredLength }} Digit.
+                    </div>
+                    <div *ngIf="code!.errors!.maxlength">Only {{ code!.errors!.maxlength!.requiredLength }} Digit Allowed
+                    </div>
+                    <div *ngIf="code!.errors!.pattern">Please, Enter Valid Code.</div>
+                </div>
+            </div>
+
+            <!-- number -->
+            <div class="col">
+                <input type="text" class="form-control" formControlName="number">
+                <label for="number">Phone Number</label>
+
+                <!-- number error -->
+                <div *ngIf="number!.invalid && number!.touched" class="alert alert-danger">
+                    <div *ngIf="number!.errors!.required">Phone Number is required.</div>
+                    <div *ngIf="number!.errors!.minlength || number!.errors!.maxlength">Please, Enter 10 Digit Contact
+                        Number.</div>
+                    <div *ngIf="number!.errors!.pattern">Please, Enter Valid Contact Number.</div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- additional request -->
+    <div>
+        <h5>Additional Requests</h5>
+        <textarea class="form-control" formControlName="additionalRequests" rows="3">
+         </textarea>
+    </div>
+
+
+
+    <!-- submit button -->
+    <button class="btn btn-primary m-2" [disabled]="form.invalid">Submit</button>
+
+    <!-- registration detail -->
+    <button class="btn btn-warning" routerLink="/registration-details">Registration Details</button>
+
+
+</form>

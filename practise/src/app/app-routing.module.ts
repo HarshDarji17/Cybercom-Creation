@@ -1,13 +1,12 @@
+import { DirectivveComponent } from './directivve/directivve.component';
+import { FormsModule , ReactiveFormsModule} from '@angular/forms';
+import { ParentComponent } from './parent/parent.component';
 
 import { SweetAlertComponent } from './sweet-alert/sweet-alert.component';
 import { PipeComponent } from './core/pipe/pipe.component';
 
 import { AddcustomerComponent } from './addcustomer/addcustomer.component';
 import { MerchantComponent } from './merchant/merchant.component';
-
-
-
-
 import { NgModule, Component } from '@angular/core';
 import { RouterModule, Routes, CanActivate } from '@angular/router';
 import {LoginComponent} from './login/login.component';
@@ -23,6 +22,8 @@ import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 import { LazyloadingComponent } from './lazyloading/lazyloading.component';
 import { GuardComponent } from './guard/guard.component';
 import {TemplateDformComponent} from './template-dform/template-dform.component';
+import { combineLatest } from 'rxjs';
+import { RegistrationFormComponent } from './registration-form/registration-form.component';
 
 
 
@@ -60,8 +61,11 @@ const routes: Routes = [
 
 { path: 'login', component:LoginComponent},
 
+{ path : 'parent' , component:ParentComponent},
 
+{path : 'reg' , component : RegistrationFormComponent},
 
+{path: 'dir' , component : DirectivveComponent}
 
 ];
 

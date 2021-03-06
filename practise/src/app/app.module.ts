@@ -24,6 +24,10 @@ import { GuardComponent } from './guard/guard.component';
 import {LazyloadingComponent} from './lazyloading/lazyloading.component';
 import { SweetAlertComponent } from './sweet-alert/sweet-alert.component';
 import { TemplateDformComponent } from './template-dform/template-dform.component';
+import { ParentComponent } from './parent/parent.component';
+import { ChildComponent } from './child/child.component';
+import { RegistrationFormComponent } from './registration-form/registration-form.component';
+import { DirectivveComponent } from './directivve/directivve.component';
 
 
 
@@ -48,7 +52,11 @@ import { TemplateDformComponent } from './template-dform/template-dform.componen
     GuardComponent,
     LazyloadingComponent,
     SweetAlertComponent,
-    TemplateDformComponent
+    TemplateDformComponent,
+    ParentComponent,
+    ChildComponent,
+    RegistrationFormComponent,
+    DirectivveComponent
    
   ],
   
