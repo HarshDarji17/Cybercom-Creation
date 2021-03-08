@@ -24,7 +24,7 @@
                      <input type="text" class="form-control" id="price" #price>
                     </div>
 
-                   <button type="button" class="btn btn-primary" (click)="onAddProduct(id,name,price)" > Add Product</button>
+                   <button type="button" class="btn btn-primary" (click)="onAddProduct(id,name,price)" >  {{editMode? 'Update Product':'Add Product' }}</button>
                    <button type="button" class="btn btn-success mx-2" (click)="onSaveProduct()">Save Product</button>
                     <button type="button" class="btn btn-warning" (click)="onFetchProduct()"> Fetch Product </button>
 
@@ -41,6 +41,7 @@
                             <th scope="col">Name</th>
                             <th scope="col">Price</th>
                             <th scope="col">Delete</th>
+                            <th scope="col">Update</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -52,9 +53,17 @@
                             <td (click)="onDeleteProduct(i)"> <a class="text-danger">
                                 <i class="fa fa-trash" aria-hidden="true"></i>
                             </a></td>
+                            <td (click)="onEditProduct(i)"> <a class="text-danger">
+                                <i class="fa fa-edit" aria-hidden="true"></i>
+                            </a></td>
                         </tr>
                     </tbody>
                 </table>
+                <div  *ngIf="featching" class="text-center">
+                    <div class="spinner-border text-warning" role="status">
+                        <span class="sr-only">Loading...</span>
+                      </div> Fetching Products.....
+                    </div>
             </div>
         </div>
     </div>

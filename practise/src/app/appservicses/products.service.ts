@@ -26,4 +26,7 @@ export class ProductsService {
    fetchProducts(){
      return this.http.get(this.url)
    }
+   deleteProduct() {
+    return this.http.delete(this.url);
+  }  
 }

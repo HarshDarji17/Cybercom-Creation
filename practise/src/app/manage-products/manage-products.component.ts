@@ -1,5 +1,5 @@
 import { ProductsService } from './../appservicses/products.service';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 
 @Component({
   selector: 'app-manage-products',
@@ -12,6 +12,17 @@ export class ManageProductsComponent implements OnInit {
 
   dataTitle = "ABC Products";
 
+    featching = false;
+    @ViewChild('id')
+    id!: ElementRef;
+    @ViewChild('name')
+    name!: ElementRef;
+    @ViewChild('price')
+    price!: ElementRef;
+    
+    
+    editMode:boolean = false;
+    editIndex!: number;
   products =[
     {
       id : 'p1',
@@ -35,11 +46,27 @@ export class ManageProductsComponent implements OnInit {
   ]
 
   onAddProduct(id: { value: any; },name: { value: any; },price: { value: any; }){
-     this.products.push({
-       id: id.value,
-       name: name.value,
-       price:price.value
-     })
+     if(this.editMode){
+
+      this.products[this.editIndex] = {
+        id : id.value,
+        name : name.value,
+        price : price.value
+      }
+
+      this.editMode = false;
+      this.id.nativeElement.value = '';
+   this.name.nativeElement.value = '';
+   this.price.nativeElement.value = '';
+     }
+     else{
+      this.products.push({
+        id: id.value,
+        name: name.value,
+        price:price.value
+      })
+     }
+     this.onSaveProduct()
   }
 
   onSaveProduct(){
@@ -50,11 +77,13 @@ export class ManageProductsComponent implements OnInit {
   }
 
   onFetchProduct(){
+    this.featching = true;
     this.productssevice.fetchProducts().subscribe(
        (response) => { //console.log(response)   // first  objecct to data convert into string json stringlyfy
       const data = JSON.stringify(response)
       // console.log(data)
       this.products = JSON.parse(data)
+      this.featching=false
       },
       (err)=>console.log(err) 
     )
@@ -64,9 +93,20 @@ export class ManageProductsComponent implements OnInit {
     if(confirm("Do you want to delete this product?")){
        
           this.products.splice(id,1)
-    
+          this.onSaveProduct();
         }
   }
+ 
+
+  onEditProduct(index:number){
+    this.editMode = true;
+    this.editIndex = index;
+  console.log(this.products[index])
+   this.id.nativeElement.value = this.products[index].id;
+   this.name.nativeElement.value = this.products[index].name;
+   this.price.nativeElement.value = this.products[index].price;
+  }
+  
   ngOnInit(): void {
   }
 
