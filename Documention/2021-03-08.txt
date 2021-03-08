@@ -1,0 +1,85 @@
+* How to Create PWA  in Angular?
+
+ 1> Create an Angular application:
+
+
+      ng new angular-pwa
+
+2>Add @angular/pwa package:
+
+     
+
+      ng add @angular/pwa
+
+3>Understand the files added/modified by @angular/pwa package:
+
+   Added Files :   -> ngsw-config.json and manifest.webmanifest for configuration purposes.
+ 
+                   -> different png files for different splash images for various resolutions icon-128x128.png, icon-144x144.png,
+                   icon-152x152.png,  icon-192x192.png, icon-384x384.png, icon-512x512.png.
+
+   Modified Files: ->   angular.json, package.json, index.html and app.module.ts 
+
+
+
+   *  ngsw-config.json :
+
+      -> It’s a configuration file in JSON format.
+
+      -> Mainly this file is responsible for the generation of ngsw-worker.js (serviceworker.js).       
+
+  *  manifest.webmanifest :   
+
+      -> it consists of how the PWA application will look when it opens up. 
+        
+      -> Here you can set options like splash screen icon, background color, display, etc.
+
+  * angular.json :
+
+      -> Added src/manifest.webmanifest file under assets, so that it will be served with the site.
+         That links ngswConfigPath and serviceWorker enabling the production configuration in build schematics.
+
+  * app.module.ts :
+
+     -> app.module.ts is used to import theServiceWorkerModule for registering ngsw-config.js (only for production mode).
+
+  4> Run the application locally :
+
+       ->The Angular CLI is limited because the service worker doesn’t work with the ng serve command.
+         You have to create a build and host it separately, perhaps using http-server.
+
+         *follow the below steps*
+
+         1> ng build --prod
+
+         2> dist/angular-pwa 
+         
+         3> cd dist/angular-pwa
+
+         4> npm i -g http-server
+
+         5> http-server
+
+         
+
+
+* What is NGRX?
+
+       RXJS + REDUX = NGRX
+
+       RXJS -> Observables
+
+      REDUX -> Redux is basically a global state management library taken from react.
+
+* Example:
+
+  videos      food                            welcome {Name}
+
+
+          Username  ABC
+
+              update
+
+  -> All videos and food loaded using API . User can click again n again food and videos then again n again 
+    call the API. There for  you can ngrx and pull down request concept. Same as Username Example.
+    
