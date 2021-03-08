@@ -28,6 +28,8 @@ import { ParentComponent } from './parent/parent.component';
 import { ChildComponent } from './child/child.component';
 import { RegistrationFormComponent } from './registration-form/registration-form.component';
 import { DirectivveComponent } from './directivve/directivve.component';
+import { ManageProductsComponent } from './manage-products/manage-products.component';
+import { ProductsService } from './appservicses/products.service';
 
 
 
@@ -56,7 +58,8 @@ import { DirectivveComponent } from './directivve/directivve.component';
     ParentComponent,
     ChildComponent,
     RegistrationFormComponent,
-    DirectivveComponent
+    DirectivveComponent,
+    ManageProductsComponent
    
   ],
   
@@ -69,7 +72,7 @@ import { DirectivveComponent } from './directivve/directivve.component';
     ReactiveFormsModule
 
   ],
-  providers: [ ActivateGuard, DeactivateGuard,ActivatecchildguardGuard],
+  providers: [ ActivateGuard, DeactivateGuard,ActivatecchildguardGuard,ProductsService],
   bootstrap: [ AppComponent ]
 })
 export class AppModule { }

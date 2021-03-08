@@ -1,3 +1,4 @@
+import { ManageProductsComponent } from './manage-products/manage-products.component';
 import { DirectivveComponent } from './directivve/directivve.component';
 import { FormsModule , ReactiveFormsModule} from '@angular/forms';
 import { ParentComponent } from './parent/parent.component';
@@ -65,7 +66,9 @@ const routes: Routes = [
 
 {path : 'reg' , component : RegistrationFormComponent},
 
-{path: 'dir' , component : DirectivveComponent}
+{path: 'dir' , component : DirectivveComponent},
+
+{path: 'product' , component:ManageProductsComponent}
 
 ];
 
