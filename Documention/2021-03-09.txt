@@ -1,0 +1,19 @@
+*FIREBASE:
+     ->  Firebase is a product of Google which helps developers to build, manage, and grow their apps easily.
+     ->  It helps developers to build their apps faster and in a more secure way. 
+     ->  It provides services to android, ios, web, and unity. It provides cloud storage.
+     ->  It uses NoSQL for the database for the storage of data.
+     ->  Firebase initially was an online chat service provider to various website through API and ran with the name Envolve .
+
+* Services :
+	   Authentication
+	   Realtime Database
+ 	   Cloud Firestore
+ 	   Cloud Storage
+ 	   Cloud Functions
+ 	   Firebase Hosting     
+    
+
+
+
+   
