@@ -6,3 +6,7 @@ th, td {
     width: 64px;
     height: 64px;
 }
+#btn {
+    margin-bottom: 2px;
+    border-radius: 0px;
+}

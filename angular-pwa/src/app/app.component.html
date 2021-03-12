@@ -1,5 +1,12 @@
-<h1 class="text-center">AngularPWA</h1>
+<h1 class="text-center">ANGULAR PWA DEMO</h1>
 
+
+
+<!-- subcribe unsubscribe btn -->
+<div class="d-flex justify-content-end container" id="btn">
+  <button *ngIf="!isSubscribed" class="btn btn-danger btn-sm" (click)="showNotification()">Subscribe</button>
+  <button *ngIf="isSubscribed" class="btn btn-danger btn-sm" (click)="showNotification()">Unsubscribe</button>
+</div>
 
 <table class="table table-dark">
     <thead>
