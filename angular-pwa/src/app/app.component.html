@@ -1,0 +1,26 @@
+<h1 class="text-center">AngularPWA</h1>
+
+
+<table class="table table-dark">
+    <thead>
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Email</th>
+        <th scope="col">FirstName</th>
+        <th scope="col">LastName</th>
+        <th scope="col">Iamge</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor = "let emp of apiData">
+        
+        <td>{{emp.id}}</td>
+        <td>{{emp.email}}</td>
+        <td>{{emp.first_name}}</td>
+        <td>{{emp.last_name}}</td>
+        <td><img class="card-img-top" [src]='emp.avatar' alt="Card image cap"></td>
+      </tr>
+      
+    </tbody>
+  </table>
+
