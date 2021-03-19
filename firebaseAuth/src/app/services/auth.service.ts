@@ -1,8 +1,10 @@
-import { Injectable } from '@angular/core';
+import { AngularFirestore, AngularFirestoreDocument } from '@angular/fire/firestore';
+import { Injectable  } from '@angular/core';
 import {AngularFireAuth } from '@angular/fire/auth';
 import {Router} from '@angular/router';
 import auth from 'firebase/app';
 import  firebase from 'firebase/app';
+
 
 
 
@@ -14,7 +16,7 @@ export class AuthService {
 
   authState: any = null;  // data going to the firebase
 
-  constructor(private afu: AngularFireAuth, private router: Router) { 
+  constructor(public afu: AngularFireAuth,  public afs: AngularFirestore , public router: Router )  { 
   this.afu.authState.subscribe((auth =>{
     this.authState = auth;
   }))
@@ -75,24 +77,38 @@ export class AuthService {
     this.router.navigate(['/login']);  // sign out btn click then we can redirect to login out
   }
 
+  
+
                  // Sign in with Google
   GoogleAuth() {
-    return this.AuthLogin(new  firebase.auth.GoogleAuthProvider());
+    return this.AuthLogin(new firebase.auth.GoogleAuthProvider());
   }
 
-  // Auth logic to run auth providers
-  AuthLogin(provider) {
-    return this.afu.signInWithPopup(provider)
-    .then((result) => {
-      
-          this.router.navigate(['userinfo']);
+  // // Auth logic to run auth providers
+  
+  // AuthLogin(provider) {
+  //   return this.afu.signInWithPopup(provider)
+  //   .then((result) => {
+  //       this.router.navigate(['userinfo']);
         
-    //  this.authState(result.user);
-    console.log(result.user)
-    }).catch((error) => {
-      window.alert(error)
-    })
-  }
-
+  //   //  this.authState(result.user);
+  //    console.log(result.user)
+  //   }).catch((error) => {
+  //     window.alert(error)
+  //   })
+  // }
+// Auth logic to run auth providers
+AuthLogin(provider) {
+  return this.afu.signInWithPopup(provider)
+  .then((result) => {
+     
+        this.router.navigate(['userinfo']);
+     
+    // this.SetUserData(result.user);
+   
+  }).catch((error) => {
+    window.alert(error)
+  })
+}
    
 }

@@ -20,7 +20,7 @@ export class ProductsService {
 
      //  return  this.http.post(this.url,products );
 
-    return  this.http.put(this.url,products , {headers : this.headers});
+    return  this.http.put(this.url,products );
    }
 
    fetchProducts(){

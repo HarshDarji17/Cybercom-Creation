@@ -18,6 +18,16 @@ import { EmployeeComponent } from './pages/employee/employee.component';
 import {ManageProductsComponent} from './pages/manage-products/manage-products.component';
 
 
+      //import for firebase notification
+      
+
+ import { MessagingService } from './services/messaging.service';
+import { AngularFireMessagingModule } from '@angular/fire/messaging';
+import { AsyncPipe } from '@angular/common';
+
+
+ 
+
 
 
 @NgModule({
@@ -38,11 +48,11 @@ import {ManageProductsComponent} from './pages/manage-products/manage-products.c
     AngularFireDatabaseModule,
     AngularFirestoreModule,
     FormsModule,
-   
+    AngularFireMessagingModule,
     HttpClientModule
   ],
   providers: [
-    
+    MessagingService,AsyncPipe
   ],
   bootstrap: [AppComponent]
 })

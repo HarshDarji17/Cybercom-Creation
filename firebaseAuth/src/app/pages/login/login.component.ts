@@ -14,7 +14,7 @@ export class LoginComponent implements OnInit {
   errorMessage = ''; // validation error handle
   error: { name: string, message: string } = { name: '', message: '' }; // for firbase error handle
 
-  constructor( private authservice: AuthService, private router: Router ) { }
+  constructor( public authservice: AuthService, private router: Router ) { }
 
   ngOnInit(): void {
   }
