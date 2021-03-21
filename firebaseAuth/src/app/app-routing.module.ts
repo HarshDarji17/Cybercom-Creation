@@ -9,6 +9,7 @@ import { UserinfoComponent } from './pages/userinfo/userinfo.component';
 import {EmployeeComponent} from './pages/employee/employee.component';
 
 import { ManageProductsComponent } from './pages/manage-products/manage-products.component';
+import { ProfileComponent } from './profile/profile.component';
 
 
 const routes: Routes = [
@@ -19,7 +20,9 @@ const routes: Routes = [
   // {path: 'glogin', component:HomeComponent},
   {path: 'employee', component:EmployeeComponent},
 
-  {path:'products' , component:ManageProductsComponent}
+  {path:'products' , component:ManageProductsComponent},
+
+  {path: 'profile' , component:ProfileComponent},
 
 
 

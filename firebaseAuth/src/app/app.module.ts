@@ -24,6 +24,7 @@ import {ManageProductsComponent} from './pages/manage-products/manage-products.c
  import { MessagingService } from './services/messaging.service';
 import { AngularFireMessagingModule } from '@angular/fire/messaging';
 import { AsyncPipe } from '@angular/common';
+import { ProfileComponent } from './profile/profile.component';
 
 
  
@@ -37,7 +38,8 @@ import { AsyncPipe } from '@angular/common';
     RegisterComponent,
     UserinfoComponent,
     EmployeeComponent,
-    ManageProductsComponent
+    ManageProductsComponent,
+    ProfileComponent
 
    
   ],

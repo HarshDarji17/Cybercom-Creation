@@ -1,51 +1,45 @@
 <div class="container">
-    <div class="row justify-content-center p-4">
-        
-        <div class="col-md-6">
-            <form (ngSubmit)="login()">
-            <h3>Firebase Login</h3>
-            <div class="form-group p-2">
-            <input type="email" name="email" class="form-control" [(ngModel)]="email" placeholder="Enter email Id" required>
-        </div>
+  <div class="row justify-content-center p-4">
+    <!--Heading-->
+    <div class="col-md-6">
+      <form (ngSubmit)="login()">
+        <h3>Firebase Login</h3>
+        <!--Email-->
         <div class="form-group p-2">
-            <input type="password" name="password" class="form-control" [(ngModel)]="password" placeholder="Enter Password" required>
+          <input type="email" name="email" class="form-control" [(ngModel)]="email" placeholder="Enter email Id"
+            required>
         </div>
+        <!---Password-->
         <div class="form-group p-2">
-            <button type="submit" class="btn btn-primary">Login</button>
-            <div class="register"><a href="#" routerLink="/register">New User Register</a></div>
+          <input type="password" name="password" class="form-control" [(ngModel)]="password"
+            placeholder="Enter Password" required>
         </div>
 
-
+        <!-- login button-->
         <div class="form-group p-2">
-          <button type="submit" class="btn btn-primary " (click)="authservice.GoogleAuth()">Continue with Google</button>
-         </div>
-         <!-- Continue with Google -->
-         <!-- <div class="form-group p-2">
-            <button type="button" class="btn googleBtn" (click)="authservice.GoogleAuth()">
-              <i class="fab fa-google-plus-g"></i>
-              Continue with Google
-            </button>
-          </div>  -->
-    
-          <!-- Continue with Facebook -->
-          <!-- <div class="formGroup">
-            <button type="button" class="btn facebookBtn" (click)="authservice.FacebookAuth()">
-              <i class="fab fa-facebook"></i>
-              Continue with Facebook
-            </button>
-          </div> -->
-        
-        </form>
-        <div class="form-group">
-            <p *ngIf="errorMessage.length > 0" class="text-danger">
-                {{errorMessage}}</p>
-        
-            <p *ngIf="error.message.length > 0" class="text-danger">
-                {{error.message}} </p>
-        
-           
+          <button type="submit" class="btn btn-primary">Login</button>
+          <div class="register"><a href="#" routerLink="/register">New User Register</a></div>
         </div>
+
+        <!-- Continue with Google -->
+        <div class="form-group p-2">
+          <button type="submit" class="btn btn-primary " (click)="authservice.GoogleAuth()">Continue with
+            Google</button>
         </div>
-        
+
+      </form>
+
+      <!--Error-->
+      <div class="form-group">
+        <p *ngIf="errorMessage.length > 0" class="text-danger">
+          {{errorMessage}}</p>
+
+        <p *ngIf="error.message.length > 0" class="text-danger">
+          {{error.message}} </p>
+
+
+      </div>
     </div>
+
+  </div>
 </div>

@@ -37,7 +37,7 @@ export class LoginComponent implements OnInit {
         })
     }
   }
-
+     // Validation
   validateForm(email, password) {
     if (email.lenght === 0) {
       this.errorMessage = "please enter email id";
