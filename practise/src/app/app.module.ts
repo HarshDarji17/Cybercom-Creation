@@ -1,7 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import {from} from  'rxjs';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MycomponentComponent } from './mycomponent/mycomponent.component';
@@ -30,9 +29,11 @@ import { RegistrationFormComponent } from './registration-form/registration-form
 import { DirectivveComponent } from './directivve/directivve.component';
 import { ManageProductsComponent } from './manage-products/manage-products.component';
 import { ProductsService } from './appservicses/products.service';
+import { ProfileComponent } from './profile/profile.component';
 
 
 
+   
 
 
 
@@ -59,7 +60,10 @@ import { ProductsService } from './appservicses/products.service';
     ChildComponent,
     RegistrationFormComponent,
     DirectivveComponent,
-    ManageProductsComponent
+    ManageProductsComponent,
+    ProfileComponent,
+   
+  
    
   ],
   
@@ -72,7 +76,7 @@ import { ProductsService } from './appservicses/products.service';
     ReactiveFormsModule
 
   ],
-  providers: [ ActivateGuard, DeactivateGuard,ActivatecchildguardGuard,ProductsService],
+  providers: [ ActivateGuard, DeactivateGuard,ActivatecchildguardGuard,ProductsService ,],
   bootstrap: [ AppComponent ]
 })
 export class AppModule { }

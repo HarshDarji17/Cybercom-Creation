@@ -25,6 +25,8 @@ import { GuardComponent } from './guard/guard.component';
 import {TemplateDformComponent} from './template-dform/template-dform.component';
 import { combineLatest } from 'rxjs';
 import { RegistrationFormComponent } from './registration-form/registration-form.component';
+import { ProfileComponent } from './profile/profile.component';
+
 
 
 
@@ -68,7 +70,15 @@ const routes: Routes = [
 
 {path: 'dir' , component : DirectivveComponent},
 
-{path: 'product' , component:ManageProductsComponent}
+{path: 'product' , component:ManageProductsComponent},
+
+
+{path: 'profile' , component:ProfileComponent}
+
+
+
+
+
 
 ];
 
