@@ -1,3 +1,4 @@
+import { ReactiveFormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
@@ -10,7 +11,8 @@ import { ListProductComponent } from './list-product/list-product.component';
   declarations: [AddProductComponent, ListProductComponent],
   imports: [
     CommonModule,
-    ProductRoutingModule
+    ProductRoutingModule,
+    ReactiveFormsModule
   ]
 })
 export class ProductModule { }

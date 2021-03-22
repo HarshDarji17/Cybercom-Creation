@@ -7,7 +7,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./add-product.component.css']
 })
 export class AddProductComponent implements OnInit { 
-  form :FormGroup;
+  form;
 
   constructor(private fb:FormBuilder) {
 
@@ -38,6 +38,6 @@ export class AddProductComponent implements OnInit {
   }
 
   onSubmit(){
-  localStorage.setItem('user', this.form.value)
+    localStorage.setItem('user', JSON.stringify(this.form.value))
   }
 }

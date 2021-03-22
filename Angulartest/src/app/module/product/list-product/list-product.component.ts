@@ -12,7 +12,8 @@ export class ListProductComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-   this.products = localStorage.getItem("user") 
+   this.products =JSON.parse (localStorage.getItem("user"))
+   console.log(this.products)
   }
 
 }

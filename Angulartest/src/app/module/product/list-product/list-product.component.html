@@ -1,17 +1,32 @@
 <p>list-product works!</p>
-<tabel >
-   <tr>
-       <th>category</th>
-       <th>product</th>
-       <th>price</th>
-   </tr>
-   <tr>
-       <td>{{products.category}}</td>
-       <td>{{products.product}}</td>
-       <td>{{products.price}}</td>
-    </tr>
 
+<body>
+    
 
-</tabel>
-
-<button routerlink="/home"> Home</button>
+    <table class="table">
+        <thead>
+          <tr>
+           
+          
+            <th scope="col">Category</th>
+            <th scope="col">Product Name</th>
+            <th scope="col">Product Price</th>
+          </tr>
+        </thead>
+        <!-- <tbody *ngFor='let datam of this._data;let i = index'>
+          <tr *ngFor='let data of datam'>-->
+              
+            <tbody>
+                <tr>
+            <!-- <th scope="row">{{i+1}}</th> -->
+            <td>{{products.catagory}}</td>
+            <td>{{products.product}}</td>
+            <td>{{products.price}}</td>
+            
+          </tr>
+          
+         </tbody>
+      </table>
+    
+    
+    </body>
