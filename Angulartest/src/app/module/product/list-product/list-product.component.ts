@@ -14,6 +14,7 @@ export class ListProductComponent implements OnInit {
   ngOnInit(): void {
    this.products =JSON.parse (localStorage.getItem("user"))
    console.log(this.products)
+   
   }
 
 }

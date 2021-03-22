@@ -13,15 +13,15 @@
             <th scope="col">Product Price</th>
           </tr>
         </thead>
-        <!-- <tbody *ngFor='let datam of this._data;let i = index'>
-          <tr *ngFor='let data of datam'>-->
+         <tbody *ngFor='let datam of products;let i = index'>
+
+          <tr *ngFor='let data of datam'>
               
-            <tbody>
-                <tr>
+           
             <!-- <th scope="row">{{i+1}}</th> -->
-            <td>{{products.catagory}}</td>
-            <td>{{products.product}}</td>
-            <td>{{products.price}}</td>
+            <td>{{data.catagory}}</td>
+            <td>{{data.product}}</td>
+            <td>{{data.price}}</td>
             
           </tr>
           

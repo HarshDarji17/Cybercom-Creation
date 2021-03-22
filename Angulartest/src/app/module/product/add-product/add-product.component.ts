@@ -38,6 +38,22 @@ export class AddProductComponent implements OnInit {
   }
 
   onSubmit(){
-    localStorage.setItem('user', JSON.stringify(this.form.value))
+    let data  = [] ;
+
+    if(localStorage.getItem('user'))
+    {
+      data = JSON.parse(localStorage.getItem('user'));
+      
+    }
+    
+    const pData = [
+      this.form.value
+      ]
+  
+     data.push(pData)
+     localStorage.setItem('user', JSON.stringify(data))
+      console.log(pData);
+      alert('Data submitted Successfully');
+      
   }
 }
