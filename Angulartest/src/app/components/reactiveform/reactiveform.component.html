@@ -43,8 +43,8 @@
                             <!-- errors -->
                             <div *ngIf="(email.invalid && email.touched) || email.dirty">
                                 <small *ngIf="email.errors?.required" class="text-danger">email is required</small>
-                                <!--question mark(?) is a safe navigation operator-->
-                                <small *ngIf="email.errors?.pattern" class="text-danger">Please provide a valid email address</small>
+                                <div *ngIf="email?.errors?.email">Please Enter correct email</div> 
+                                <div *ngIf="email?.errors?.pattern">Please Enter only gmail account</div>
                               </div>
 
      </div>
@@ -63,6 +63,7 @@
      <div *ngIf="(confirmemail.invalid && confirmemail.touched) || confirmemail.dirty">
     	<small *ngIf="confirmemail.errors?.required" class="text-danger">  confirmemail is required</small>
     	<small *ngIf="confirmemail.errors?.pattern" class="text-danger">Please provide a valid email address</small>
+        <div *ngIf="form.get('confirmemail').hasError('mustMatch');">Email does not match </div> 
              	</div>
                 </div>
 

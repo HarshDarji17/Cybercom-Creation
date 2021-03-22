@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
@@ -9,7 +10,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class AddProductComponent implements OnInit { 
   form;
 
-  constructor(private fb:FormBuilder) {
+  constructor(private fb:FormBuilder , private router:Router) {
 
 
     this.form = this.fb.group({
@@ -54,6 +55,7 @@ export class AddProductComponent implements OnInit {
      localStorage.setItem('user', JSON.stringify(data))
       console.log(pData);
       alert('Data submitted Successfully');
+      this.router.navigateByUrl('/list-product');
       
   }
 }

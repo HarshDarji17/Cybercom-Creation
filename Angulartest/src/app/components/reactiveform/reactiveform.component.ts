@@ -17,12 +17,13 @@ export class ReactiveformComponent implements OnInit {
              Validators.pattern("^[a-zA-Z]+(?: [a-z|A-Z]+)*$")]],
 
     email:['',  [ Validators.required ,
-      Validators.pattern("^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$")]   
+      Validators.pattern("^[a-z0-9](\.?[a-z0-9]){5,}@g(oogle)?mail\.com$"),
+      Validators.email]   
     ],
 
     
     confirmemail:['', [Validators.required,
-      Validators.pattern("^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$")]],
+      Validators.pattern("^[a-z0-9](\.?[a-z0-9]){5,}@g(oogle)?mail\.com$")]],
     degree:['',Validators.required],
     date:['',Validators.required],
     country:['',Validators.required],
