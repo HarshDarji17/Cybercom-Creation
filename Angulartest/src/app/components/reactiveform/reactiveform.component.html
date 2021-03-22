@@ -1,0 +1,157 @@
+<div class="container">
+
+    <!---Heading-->
+   
+   <div class="row justify-content-center">
+       <div class="col-md-6 bg-white text-left py-3 rounded shadow ">
+
+           <!-- Form-->
+           <form [formGroup]="form"  (ngSubmit)="onSubmit()">   
+                  <!--Username-->
+                  
+               <div class="form-group">
+                   <label for="name"> Name</label>
+                   <input type="text"
+                          class="form-control"
+                          id="name"
+                          autocomplete="off"
+                          formControlName="name"
+                          placeholder="Name">
+                          <small class="text-danger"   ></small>
+                        </div>
+
+               <!-- errors -->
+            <div *ngIf="name.touched && name.invalid" class="alert alert-danger">
+                <div *ngIf="name.errors.required">Enter First Name</div>
+                <div *ngIf="name.errors.minlength">Enter Minimum {{ name.errors.minlength.requiredLength }} Character</div>
+                <div *ngIf="name.errors.maxlength">Only {{ name.errors.maxlength.requiredLength }} Character Allowed</div>
+                <div *ngIf="name.errors.pattern">Please, Enter Valid First Name</div>
+            </div>
+        
+
+               <!---Email-->
+               <div class="form-group">
+                   <label for="email">Email</label>
+                   <input type="email"
+                          class="form-control"
+                          id="email"
+                          autocomplete="off"
+                          formControlName="email"
+                          placeholder="Enter Email">
+                          <small class="text-danger"></small>
+                         
+                            <!-- errors -->
+                            <div *ngIf="(email.invalid && email.touched) || email.dirty">
+                                <small *ngIf="email.errors?.required" class="text-danger">email is required</small>
+                                <!--question mark(?) is a safe navigation operator-->
+                                <small *ngIf="email.errors?.pattern" class="text-danger">Please provide a valid email address</small>
+                              </div>
+
+     </div>
+                <!--- Confirm Email-->
+                <div class="form-group">
+                    <label for="email"> Confirm Email</label>
+                    <input type="email"
+                           class="form-control"
+                           id=" confirmemail"
+                           autocomplete="off"
+                           formControlName="confirmemail"
+                           placeholder="Enter Email">
+                           <small class="text-danger"></small>
+                             
+                           <!--eror-->
+     <div *ngIf="(confirmemail.invalid && confirmemail.touched) || confirmemail.dirty">
+    	<small *ngIf="confirmemail.errors?.required" class="text-danger">  confirmemail is required</small>
+    	<small *ngIf="confirmemail.errors?.pattern" class="text-danger">Please provide a valid email address</small>
+             	</div>
+                </div>
+
+
+                
+           
+              <!---Graduation degree-->
+               <div class="form-group">
+                   <label for="degree">Graduation degree</label>
+                   <input   type="text"
+                            class="form-control"
+                            id="degree"
+                            formControlName="degree"
+                            placeholder="Enter gradution degree">
+                   
+               </div>
+
+
+               <!--Date of birth-->
+            <div class="form-group">
+               <label for="date">day-month-year</label>
+               <input 
+               class="form-control" 
+               placeholder="date of birth"
+               type="date" 
+               formControlName="date">
+
+                <!-- errors -->
+            <div *ngIf="date.touched && date.invalid" class="alert alert-danger">
+                <div *ngIf="date.errors.required">Enter Joining Date</div>
+            </div>
+      </div>
+         
+               <!--- Country-->
+
+             <div class="form-group">
+                <label for="country">Country</label>
+                <select class="form-control"
+                name="country"
+                value="country"
+                formControlName="country">      
+                <option selected disabled value="">-------- Select Country--------</option>
+                <option>India</option>
+                <option > Usa</option>
+                <option > Canada</option>
+                </select> 
+            </div>
+           
+              
+
+                    <!--state-->
+
+                    <div class="form-group">
+                        <label for="state">State</label>
+                        <select class="form-control"
+                        name="state"
+                        value="state"
+                        formControlName="state">      
+                        <option selected disabled value="">-------- Select State--------</option>
+                        <option> Gujarat</option>
+                        <option>Aravalli</option>
+                        <option>Vadodara</option>
+                        </select> 
+                    </div>
+
+                 <!--city-->
+      
+
+                 <div class="form-group">
+                    <label for="city">City</label>
+                    <select class="form-control"
+                    name="city"
+                    value="city"
+                    formControlName="city">      
+                    <option selected disabled value="">-------- Select City--------</option>
+
+                    <option>Lunawada</option>
+                    <option>Modasa</option>
+                    <option>Balasinor</option>
+                    </select> 
+                </div>
+             
+
+                    <!--Submit Button-->
+             <div class="position-relative btn-row">
+                 <button type="submit" class="btn btn-success">Submit</button>
+             </div>
+           </form>
+       </div>
+   </div>
+</div>
+

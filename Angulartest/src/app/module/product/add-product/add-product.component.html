@@ -1,0 +1,47 @@
+
+
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+
+    <!--- category-->
+
+    <div class="form-group">
+        <label for="category">Catagory</label>
+        <select class="form-control" name="product category" value="catagory" formControlName="catagory">
+            <option selected disabled value="">-------- Select Product category--------</option>
+            <option>Electric</option>
+            <option>clothes</option>
+        </select>
+
+
+        <div *ngIf="catagory.touched && catagory.invalid" class="alert alert-danger">
+            <div *ngIf="catagory.errors.required">Enter First Name</div>
+
+        </div>
+    </div>
+    
+    
+    <div class=form-group>
+
+        <label for="product">Product Name</label>
+        <input type="text" class="form-control" id="product" placeholder="Enter Name of Product"
+            formControlName="product">
+
+        <div *ngIf="product.touched && product.invalid" class="alert alert-danger">
+            <div *ngIf="product.errors.required">Enter First Name</div>
+
+        </div>
+
+    </div>
+
+    <div class="form-group">
+        <label for="price">Product Price</label>
+        <input type="price" class="form-control" id="price" placeholder="Product Price"
+            formControlName="price">
+
+        <div *ngIf="price.touched && price.invalid" class="alert alert-danger">
+            <div *ngIf="price.errors.required">Enter First Name</div>
+        </div>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+    <button routerlink="/home"> Home</button>
+</form>
