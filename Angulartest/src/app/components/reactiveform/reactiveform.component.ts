@@ -17,13 +17,16 @@ export class ReactiveformComponent implements OnInit {
              Validators.pattern("^[a-zA-Z]+(?: [a-z|A-Z]+)*$")]],
 
     email:['',  [ Validators.required ,
-      Validators.pattern("^[a-z0-9](\.?[a-z0-9]){5,}@g(oogle)?mail\.com$"),
-      Validators.email]   
+                  Validators.pattern("^[a-z0-9](\.?[a-z0-9]){5,}@g(oogle)?mail\.com$"),
+                  Validators.email,
+                  ]   
     ],
 
     
     confirmemail:['', [Validators.required,
       Validators.pattern("^[a-z0-9](\.?[a-z0-9]){5,}@g(oogle)?mail\.com$")]],
+
+
     degree:['',Validators.required],
     date:['',Validators.required],
     country:['',Validators.required],
@@ -68,29 +71,28 @@ export class ReactiveformComponent implements OnInit {
     return this.form.get('date');
   }
 
-  // get firstname
+  // get country
   get  country () {
     return this.form.get('country');
   }
 
-  // get firstname
+  // get state
   get  state () {
     return this.form.get(' state');
   }
 
-  // get firstname
+  // get city
   get city  () {
     return this.form.get(' city');
   }
 
   onSubmit(){
     if(this.form.valid){
-    
+      
     console.log(this.form.value);
-    }else{
-      console.log()
+    }
     }
 
   }
 
-}
+

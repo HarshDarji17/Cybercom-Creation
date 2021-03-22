@@ -52,7 +52,10 @@ export class AddProductComponent implements OnInit {
       ]
   
      data.push(pData)
+
+
      localStorage.setItem('user', JSON.stringify(data))
+     
       console.log(pData);
       alert('Data submitted Successfully');
       this.router.navigateByUrl('/list-product');
