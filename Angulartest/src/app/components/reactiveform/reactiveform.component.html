@@ -17,7 +17,7 @@
                 </div>
 
                 <!-- errors -->
-                <div *ngIf="name.touched && name.invalid" class="alert alert-danger">
+                <div *ngIf=" !name.valid && (name.touched || userSubmittted)" class="alert alert-danger">
                     <div *ngIf="name.errors.required">Enter First Name</div>
                     <div *ngIf="name.errors.minlength">Enter Minimum {{ name.errors.minlength.requiredLength }}
                         Character</div>
@@ -35,7 +35,7 @@
                     <small class="text-danger"></small>
 
                     <!-- errors -->
-                    <div *ngIf="(email.invalid && email.touched) || email.dirty">
+                    <div *ngIf=" !email.valid && (email.touched || userSubmittted)" class="alert alert-danger">
                         <small *ngIf="email.errors?.required" class="text-danger">email is required</small>
                         <div *ngIf="email?.errors?.email">Please Enter correct email</div>
                         <div *ngIf="email?.errors?.pattern">Please Enter only gmail account</div>
@@ -50,14 +50,14 @@
                    
 
                     <!--error-->
-                    <div *ngIf="(confirmemail.invalid && confirmemail.touched) || confirmemail.dirty">
+                    <div *ngIf=" !confirmemail.valid && (confirmemail.touched || userSubmittted)" class="alert alert-danger">
                         <small *ngIf="confirmemail.errors?.required" class="text-danger"> confirmemail is
                             required</small>
                         <small *ngIf="confirmemail.errors?.pattern" class="text-danger">Please provide a valid email
                             address</small>
                             <div *ngIf="confirmemail?.errors?.pattern">Please Enter only gmail account</div>
                        
-                        <div *ngIf="form.get('confirmemail').hasError('mustMatch');">Email does not match </div>
+                         <div *ngIf="form.get('confirmemail').hasError('mustMatch');">Email does not match </div> 
                     </div>
                 </div>
 
@@ -71,10 +71,10 @@
                         placeholder="Enter gradution degree">
 
                     <!-- errors -->
-                    <!-- <div *ngIf="degree.touched && degree.invalid" class="alert alert-danger">
+                    <div *ngIf=" !degree.valid && (degree.touched || userSubmittted)" class="alert alert-danger"> 
                         <div *ngIf="degree.errors.required">Enter Graduation degree</div>
-                    </div> -->
-
+                  
+                    </div>
 
                 </div>
 
@@ -85,10 +85,11 @@
                     <input class="form-control" placeholder="date of birth" type="date" formControlName="date">
 
                     <!-- errors -->
-                    <div *ngIf="date.touched && date.invalid" class="alert alert-danger">
+                    <div *ngIf=" !date.valid && (date.touched || userSubmittted)" class="alert alert-danger">
                         <div *ngIf="date.errors.required">Enter Date of birth</div>
+                        </div>
                     </div>
-                </div>
+            
 
                 <!--- Country-->
 
@@ -104,9 +105,9 @@
                     <!-- errors -->
                     
                    
-                
+                    <div *ngIf=" !country.valid && (country.touched || userSubmittted)" class="alert alert-danger">
                     <div *ngIf="country?.errors?.required">Please Enter Country</div>
-                
+                </div>
                     </div>
 
                 
@@ -125,9 +126,9 @@
                     </select>
 
                     <!-- errors -->
-                    
-                    <div *ngIf="state?.errors?.required">Please Enter State</div>   
-
+                    <div *ngIf=" !state.valid && (state.touched || userSubmittted)" class="alert alert-danger"></div>
+                     <div *ngIf="state?.errors?.required">Please Enter State</div>   
+                       
                     </div>
 
                 

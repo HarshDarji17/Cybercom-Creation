@@ -9,7 +9,7 @@ import { ConfirmedValidator } from './../../common/custom.validators';
 })
 export class ReactiveformComponent implements OnInit {
     form;
-  user: any = {};
+   userSubmittted:boolean;
   constructor( private fb:FormBuilder) { 
 
   this.form = this.fb.group({
@@ -42,10 +42,10 @@ export class ReactiveformComponent implements OnInit {
   ngOnInit(): void {
   }
      //its not worked
-  // emailMatchingValidatior(fb:FormBuilder):Validators {
-  //      return fb.control('email').value === fb.control('confirmemail').value?null :
-  //      {notmatched:true};
-  // }
+  emailMatchingValidatior(fb:FormBuilder):Validators {
+       return fb.control('email').value === fb.control('confirmemail').value?null :
+       {notmatched:true};
+  }
   
    // get firstname
    get name() {
@@ -69,9 +69,6 @@ export class ReactiveformComponent implements OnInit {
     return this.form.get(' degree');
   }
 
-
-
-
   // get Date
   get date() {
     return this.form.get('date');
@@ -93,14 +90,11 @@ export class ReactiveformComponent implements OnInit {
   }
 
   onSubmit(){
-    if(this.form.valid){
-      
-      console.log(this.form.value)
-      alert('Data submitted Successfully');
-     
-    }
+    console.log(this.form.value)
+    this.userSubmittted=true;
+      }
   }
-} 
+
   
  
 
