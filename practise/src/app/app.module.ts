@@ -29,7 +29,7 @@ import { RegistrationFormComponent } from './registration-form/registration-form
 import { DirectivveComponent } from './directivve/directivve.component';
 import { ManageProductsComponent } from './manage-products/manage-products.component';
 import { ProductsService } from './appservicses/products.service';
-import { ProfileComponent } from './profile/profile.component';
+
 
 
 
@@ -61,7 +61,7 @@ import { ProfileComponent } from './profile/profile.component';
     RegistrationFormComponent,
     DirectivveComponent,
     ManageProductsComponent,
-    ProfileComponent,
+   
    
   
    
