@@ -1,5 +1,6 @@
 import { FormBuilder, Validators } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
+import { ConfirmedValidator } from './../../common/custom.validators';
 
 @Component({
   selector: 'app-reactiveform',
@@ -8,6 +9,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ReactiveformComponent implements OnInit {
     form;
+  user: any = {};
   constructor( private fb:FormBuilder) { 
 
   this.form = this.fb.group({
@@ -34,12 +36,16 @@ export class ReactiveformComponent implements OnInit {
     city:['',Validators.required]
 
 
-  });
+  } , {validator : ConfirmedValidator('email', 'confirmemail') } );
 
   }
   ngOnInit(): void {
   }
-
+     //its not worked
+  // emailMatchingValidatior(fb:FormBuilder):Validators {
+  //      return fb.control('email').value === fb.control('confirmemail').value?null :
+  //      {notmatched:true};
+  // }
   
    // get firstname
    get name() {
@@ -53,12 +59,12 @@ export class ReactiveformComponent implements OnInit {
     return this.form.get('email');
   }
 
-  // get email
+  // get  confirmemail
   get confirmemail() {
     return this.form.get('confirmemail');
   }
 
-   // get firstname
+   // get gradution degree 
    get  degree () {
     return this.form.get(' degree');
   }
@@ -89,10 +95,15 @@ export class ReactiveformComponent implements OnInit {
   onSubmit(){
     if(this.form.valid){
       
-    console.log(this.form.value);
+      console.log(this.form.value)
+      alert('Data submitted Successfully');
+     
     }
-    }
-
   }
+} 
+  
+ 
+
+
 
 

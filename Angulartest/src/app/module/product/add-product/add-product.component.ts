@@ -58,7 +58,7 @@ export class AddProductComponent implements OnInit {
      
       console.log(pData);
       alert('Data submitted Successfully');
-      this.router.navigateByUrl('/list-product');
+      // this.router.navigateByUrl('/list-product');
       
   }
 }
