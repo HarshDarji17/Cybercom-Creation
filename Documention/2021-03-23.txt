@@ -1,0 +1,114 @@
+***What is Garbage Collection?
+  
+--->When program ends the data inside location is garbage which needs to be cleared.
+--->In short clear these free locations is the process of collecting the garbage or Garbage Collection or GC.
+--->The garbage collection considers references& it tries to release the memory if a location is not "reachable".
+--->Memory Allocation is done automatically.
+
+
+
+***What is Memory Leakage?
+
+---> A memory leak is one of the worst types of issues you can have . It’s hard to find,
+     hard to debug, and often hard to solve.
+---> A Memory Leakage occurs when an application fails to get rid of unused resources.
+---> A program to release discaeded memory, causing impaired perfomance or failure.
+---> It occours when the memory program does not return or release allocated memory space,
+     even after execution,resulting in slower or unresponsive system behavior.
+---> A Memory Leak is considerd a failure or bug within the program that holds it.
+
+  * Memory Management:::
+
+       1> Allocate the needed memory
+       2> Read and write allocated memory
+       3> Release the memory it's not needed to used.
+
+  * Example:
+
+     ---> Assume that we have use two routes in our site 
+                      profile and product
+  
+    ---> In short both data fetching data to api and server then use the
+          subscribe to some Observable. When User navigate to the profile to product page
+          then destroy the memory of profile component and initilize a product component.
+            
+    ---> The profile component has subscribed to the some observable . we can  
+          navigate the another component and  destroying the profilecomponent.
+
+    ---> Memory leak issue Overcome with the takeUntil + ngOnDestroy pattern.
+
+
+  
+
+
+*REFERENCE LINKS:
+      
+    1> ---> https://medium.com/angular-in-depth/how-to-create-a-memory-leak-in-angular-4c583ad78b8b
+    2> --- >https://www.twilio.com/blog/prevent-memory-leaks-angular-observable-ngondestroy
+
+
+***3. What is Server Side Rendering?
+
+---> Angular application executes in the browser and rendering pages in the DOM by user actions.
+
+---> Angular application you can run on the server using add Angular Universal and make Angular application SEO friendly.
+
+**Why use Server Side Rendering (SSR)?
+
+---> There are 3 reasons for create angular application with server side rendering.
+
+                1>SEO friendly
+                2>Improve performance on mobile
+                3>Show the first page quickly
+
+---> Step 1: Install the Angular CLI:
+
+             
+                   npm install -g @angular/cli
+
+
+ 
+    Step 2: Create Application:
+
+
+                  ng new my-project
+
+    Step 3: Add Angular Universal in Your Application:
+
+ 
+                  ng add @nguniversal/express-engine --clientProject my-project
+
+
+   ---> We can  Add this package then generate 5 files:
+
+
+          1> main.server.ts                   : bootstrapper for server application code
+          2>app.server.module.ts              : server-side application module
+          3>server.ts                         : express web server
+          4>tsconfig.server.json              : TypeScript server configuration
+          5>webpack.server.config.js          : webpack server configuration
+
+  Step 4: Run This Application:
+
+            
+                 npm run build:ssr
+                 npm run serve:ssr
+
+
+  ---> This application working as nodejs project. 
+       You can also run this project using following command.
+
+                
+                    node dist/server
+
+
+
+ *REFERENCE LINKS:
+
+    --->https://www.truecodex.com/course/angular-6/angular-server-side-rendering
+
+   
+
+
+
+
