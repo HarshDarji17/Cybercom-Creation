@@ -1,0 +1,52 @@
+<h1  style="text-align: center;" >Badge</h1>
+<hr>
+
+<div class="container">
+    <div class="row">
+
+        <!-- overlap false -->
+        <div class="col-lg-4 mt-5">
+            <p><span matBadge="4" matBadgeOverlap="false">Text with a badge</span></p>
+        </div>
+
+        <!-- overlap large -->
+        <div class="col-lg-4 mt-5">
+            <p><span matBadge="1" matBadgeSize="large">Text with large badge</span></p>
+        </div>
+
+        <!-- badge  set position -->
+        <div class="col-md-4 mt-5">
+            <p> Button with a badge on the left
+                <button mat-raised-button color="primary" matBadge="5" matBadgePosition="before" matBadgeColor="accent"> Action</button>
+            </p>
+            <br>
+            <p> Button with a badge on the below before
+                <button mat-raised-button color="primary" matBadge="5" matBadgePosition="below before" matBadgeColor="accent"> Action</button>
+            </p>
+            <br>
+            <p> Button with a badge on the below after
+                <button mat-raised-button color="primary" matBadge="5" matBadgePosition="below after" matBadgeColor="accent"> Action</button>
+            </p>
+            <br>
+            <p> Button with a badge on the above before
+                <button mat-raised-button color="primary" matBadge="5" matBadgePosition="above before" matBadgeColor="accent"> Action</button>
+            </p>
+        </div>
+
+        <!-- with check in hide -->
+        <div class="col-lg-6 mt-5">
+            <p>   Button toggles badge visibility
+                <button mat-raised-button matBadge="7" [matBadgeHidden]="hidden" (click)="toggleBadgeVisibility()"> Hide </button>
+            </p>
+        </div>
+
+        <!-- with icon -->
+        <div class="col-lg-6 mt-5">
+            <p> Icon with a badge
+                <mat-icon matBadge="13" matBadgeColor="warn">home</mat-icon>
+            </p>
+        </div>
+
+    </div>
+</div>
+
