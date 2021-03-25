@@ -1,0 +1,16 @@
+#heading {
+  text-align: center;
+  font-size: 40px;
+}
+.container {
+    padding-bottom: 20px;
+}
+.example-card {
+  max-width: 350px;
+}
+.example-header-image {
+  background-size: cover;
+}
+button {
+    margin-left: 20px;
+}

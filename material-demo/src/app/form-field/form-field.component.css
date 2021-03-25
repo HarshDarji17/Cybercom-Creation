@@ -1,0 +1,17 @@
+.example-full-width {
+    width: 350px;
+   
+  }
+  .col-md-4,
+  .col-md-6 {
+    margin: 50px auto;
+    text-align: center;
+  }
+
+.example-right-align {
+    text-align: left;
+    -moz-appearance: textfield;
+  }
+  
+  
+  
