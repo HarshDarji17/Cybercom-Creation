@@ -1,3 +1,5 @@
+import { PaginatorComponent } from './paginator/paginator.component';
+import { TabsComponent } from './tabs/tabs.component';
 import { CardComponent } from './card/card.component';
 import { EmployeesComponent } from './employees/employees.component';
 import { FormFieldComponent } from './form-field/form-field.component';
@@ -9,6 +11,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { ProgessspinerComponent } from './progessspiner/progessspiner.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { GridListComponent } from './grid-list/grid-list.component';
+import { MenuComponent } from './menu/menu.component';
+import { StepperComponent } from './stepper/stepper.component';
 
 const routes: Routes = [
 
@@ -28,7 +32,18 @@ const routes: Routes = [
 
   {path:'grid'  , component:GridListComponent},
 
-  {path:'card' , component:CardComponent}
+  {path:'card' , component:CardComponent},
+
+  {path:'tabs' , component:TabsComponent},
+
+  {path:'menu' , component:MenuComponent},
+
+  {path:'paginator' , component:PaginatorComponent},
+
+  {path:'stepper' , component:StepperComponent},
+
+
+
 ];
 
 @NgModule({

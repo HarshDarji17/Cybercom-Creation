@@ -1,0 +1,97 @@
+<h1 id="heading" class="m-5">Tabs</h1>
+<hr>      
+   <div class="container"> 
+       
+       <!--Basic use of the tab group-->
+<mat-tab-group   selectedIndex="2" animationDuration="200ms" [backgroundColor]="bgColor" [color]="color">
+    <mat-tab label="profile">
+     <h2>Profile</h2>
+     <p>This is a  a Paragraph</p>
+    </mat-tab>
+
+    <mat-tab label="About">
+        <h2>About</h2>
+        <p>This is  a a a Paragraph</p>
+    </mat-tab>
+
+
+       <mat-tab >
+           <ng-template mat-tab-label>
+              <mat-icon>settings</mat-icon>Settings
+           </ng-template>
+        <h2>Settings</h2>
+        <p>This is a Paragraph</p>
+       </mat-tab>  
+
+
+       <mat-tab label="Lazy Loading">
+        <ng-template matTabContent>
+            <h2> Complex Content </h2>
+            <p>This is a paragraph</p>
+        </ng-template>
+       </mat-tab>
+  </mat-tab-group>
+
+  <h1 style="text-align: center;">Very slow animation</h1>
+<mat-tab-group animationDuration="5000ms">
+  <mat-tab label="First">Content 1</mat-tab>
+  <mat-tab label="Second">Content 2</mat-tab>
+  <mat-tab label="Third">Content 3</mat-tab>
+</mat-tab-group>
+
+<h1 style="text-align: center;">No animation</h1>
+
+<mat-tab-group animationDuration="0ms">
+  <mat-tab label="First">Content 1</mat-tab>
+  <mat-tab label="Second">Content 2</mat-tab>
+  <mat-tab label="Third">Content 3</mat-tab>
+</mat-tab-group>
+
+
+<!--Tab group with dynamic height based on tab contents-->
+<mat-tab-group dynamicHeight>
+    <mat-tab label="Short tab">
+      <div class="example-small-box mat-elevation-z4">
+        Small content
+      </div>
+    </mat-tab>
+    <mat-tab label="Long tab">
+      <div class="example-large-box mat-elevation-z4">
+        Large content
+      </div>
+    </mat-tab>
+  </mat-tab-group>
+
+  <!--Tab group with dynamically changing tabs-->
+  <mat-form-field>
+    <mat-label>Selected tab index</mat-label>
+    <input matInput type="number" [formControl]="selected">
+  </mat-form-field>
+  
+  <div>
+    <button mat-raised-button
+            class="example-add-tab-button"
+            (click)="addTab(selectAfterAdding.checked)">
+      Add new tab
+    </button>
+    <mat-checkbox #selectAfterAdding> Select tab after adding </mat-checkbox>
+  </div>
+  
+  <mat-tab-group [selectedIndex]="selected.value"
+                 (selectedIndexChange)="selected.setValue($event)">
+    <mat-tab *ngFor="let tab of tabs; let index = index" [label]="tab">
+      Contents for {{tab}} tab
+  
+      <button mat-raised-button
+              class="example-delete-tab-button"
+              [disabled]="tabs.length === 1"
+              (click)="removeTab(index)">
+        Delete Tab
+      </button>
+    </mat-tab>
+  </mat-tab-group>
+
+   
+
+  
+</div> 

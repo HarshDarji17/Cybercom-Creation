@@ -18,6 +18,11 @@ import {EmployeeService} from './shared/employee.service';
 import { FormFieldComponent } from './form-field/form-field.component';
 import { GridListComponent } from './grid-list/grid-list.component';
 import { CardComponent } from './card/card.component';
+import { TabsComponent } from './tabs/tabs.component';
+import { MenuComponent } from './menu/menu.component';
+import { PaginatorComponent } from './paginator/paginator.component';
+import { TableComponent } from './table/table.component';
+import { StepperComponent } from './stepper/stepper.component';
 
 
 
@@ -37,6 +42,11 @@ import { CardComponent } from './card/card.component';
     FormFieldComponent,
     GridListComponent,
     CardComponent,
+    TabsComponent,
+    MenuComponent,
+    PaginatorComponent,
+    TableComponent,
+    StepperComponent,
   ],
   imports: [
     BrowserModule,
@@ -44,7 +54,7 @@ import { CardComponent } from './card/card.component';
     BrowserAnimationsModule,
     MaterialModule,
     ReactiveFormsModule,
-    BrowserAnimationsModule
+    
 
   ],
   providers: [EmployeeService],

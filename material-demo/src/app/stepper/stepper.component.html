@@ -1,0 +1,93 @@
+ <h1 style="text-align: center; " class="mt-3" > Stepper</h1>  
+   <hr>
+   <!--- Horizontal --> 
+
+     <!---Linear mode on->then go ahed-->
+<button mat-raised-button (click)="isLinear = !isLinear" id="toggle-linear">
+
+    {{!isLinear ? 'Enable linear mode' : 'Disable linear mode'}}
+
+</button>
+
+   <!-- label position set as bpttom and end and bydefult create by end -->
+<mat-horizontal-stepper labelPosition="bottom" [linear]="isLinear" #stepper>
+
+    <!--matStepper -> going to the next state
+    matStepperPrevious -> going to the previous state
+-->
+       <!---Profile group-->
+       <!-- editable use for we can not return go back for name-->
+    <mat-step [stepControl]="profileFormGroup" editable="false">
+        <form [formGroup]="profileFormGroup">
+        <ng-template matStepLabel>Profile</ng-template>
+        <mat-form-field>
+            <input matInput placeholder="Name" formcontrol="name" required>
+        </mat-form-field>
+        <div>
+          <button mat-button matStepperNext>Next</button>
+       </div>
+        </form>
+    </mat-step>
+             <!--Address Formgroup-->
+       <!-- use optional then not validate for go ahed-->
+    <mat-step [stepControl]="addressFormGroup" optional>
+        <form [formGroup]="addressFormGroup">
+         <ng-template matStepLabel> Address</ng-template> 
+         <mat-form-field>
+             <input matInput placeholder= "Address" formcontrol= "address" required>
+         </mat-form-field>  
+        
+        <div>
+         <button mat-button matStepperPrevious> Previous</button>
+         <button mat-button matStepperNext> Next</button>
+        </div>
+    </form>
+    </mat-step>
+            <!---Done And Reset method-->
+    <mat-step label="Done">
+        <p>This is Final Step</p>
+        <button mat-button matStepperPrevious> Previous</button>
+        <button mat-button matStepperNext>Next </button>
+        <div>
+            <button mat-button matStepperPrevious>Back</button>
+            <button mat-button (click)="stepper.reset()">Reset</button>
+          </div>
+    </mat-step>
+
+</mat-horizontal-stepper>
+  <br><br><br><br><br>
+  <hr>
+
+
+
+
+<!---Vertical-->
+
+ <mat-vertical-stepper>
+
+    <!--matStepper -> going to the next state
+    matStepperPrevious -> going to the previous state
+-->
+    <mat-step label="profile">
+        <p>Step 1</p>
+        <button mat-button matStepperNext>Next</button>
+    </mat-step>
+
+    <mat-step label="Address">
+        <p>Step 2</p>
+        <button mat-button matStepperPrevious> Previous</button>
+        <button mat-button matStepperNext> Next</button>
+    </mat-step>
+
+    <mat-step label="Done">
+        <p>Step 3</p>
+        <button mat-button matStepperPrevious> Previous</button>
+        <button mat-button matStepperNext>Next </button>
+    </mat-step>
+
+</mat-vertical-stepper>
+
+
+
+
+

@@ -20,7 +20,10 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import { MatNativeDateModule } from '@angular/material/core';
 import { BrowserAnimationsModule, NoopAnimationsModule } from '@angular/platform-browser/animations';
-
+import {MatTabsModule} from '@angular/material/tabs';
+import {MatMenuModule} from '@angular/material/menu';
+import {MatPaginatorModule} from '@angular/material/paginator';
+import {MatStepperModule} from '@angular/material/stepper';
 
 
 
@@ -45,7 +48,11 @@ import { BrowserAnimationsModule, NoopAnimationsModule } from '@angular/platform
   CommonModule,
   BrowserAnimationsModule,
   NoopAnimationsModule,
-  MatCheckboxModule
+  MatCheckboxModule,
+  MatTabsModule,
+  MatMenuModule,
+  MatPaginatorModule,
+  MatStepperModule
   
   
  ]
