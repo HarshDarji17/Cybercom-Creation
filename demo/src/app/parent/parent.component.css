@@ -1,0 +1,42 @@
+p{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+  }
+.parentBox{
+    background-color: #fdfdfd;
+    border: 1px solid #d9d9d9;
+    padding: 15px;
+    border-radius: 5px;
+    width: 43%;
+    margin-right: 50px;
+    margin-left: 50px;
+}
+.parentBox h2{
+    color:green;
+    font-size: 42px;
+    margin: 0;
+    padding:0 0 15px;
+  
+}
+.parentBox table{
+    font-size: 30px;
+    border-spacing: 0 15px;
+
+}
+.parentBox table th{
+    background: silver;
+    text-align: left
+}
+.parentBox table th{
+    background: #f4f4f4
+  }
+  .removeLink{
+    color:#d00421;
+    cursor:pointer;
+  }
+  .child{
+      margin-right: 50px;
+  }

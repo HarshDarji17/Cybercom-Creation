@@ -12,11 +12,15 @@ import { ReqResLoginComponent } from './req-res-login/req-res-login.component';
 import {MatCardModule} from '@angular/material/card';
 import { globalErrorHandler } from './error/global-errorHandler';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ParentComponent } from './parent/parent.component';
+import { ChildComponent } from './child/child.component';
 @NgModule({
   declarations: [
     AppComponent,
     ResReqComponent,
-    ReqResLoginComponent,   
+    ReqResLoginComponent,
+    ParentComponent,
+    ChildComponent,   
   ],
   imports: [
     BrowserModule,
