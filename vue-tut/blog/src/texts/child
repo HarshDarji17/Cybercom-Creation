@@ -1,0 +1,6 @@
+Send props Child to parent
+     make a component
+     call a fun on btn click
+     emit a event from fun
+     call parent com fun with event emiter
+     update title

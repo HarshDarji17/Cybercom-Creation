@@ -11,6 +11,7 @@
      <h1 v-if="show"> condition rendenring in vue js</h1>
     <h1 v-else> conditional rendering else block</h1>
     <button v-on:click="display">Toggle  Element</button>
+     
     </div> 
 
      </div>
@@ -18,6 +19,8 @@
 <script>
 export default{
     name:'Home',
+
+
     props:{
         data:String
     },
@@ -35,6 +38,10 @@ export default{
         //conditional
        display(){
            this.show=!this.show
+       },
+       //Template
+       updateText(){
+            this.name="Harsh"
        }
     }
 };
