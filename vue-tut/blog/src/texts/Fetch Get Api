@@ -1,0 +1,7 @@
+install axios and vue-axios  -> npm i axios vue-axios  
+make component
+use mounted life cycle hooks for call api
+fetch api with axios
+used v-for show list of data
+
+used employeelist component

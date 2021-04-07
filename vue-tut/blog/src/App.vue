@@ -11,14 +11,18 @@
     <!-- <DataBind data=" databind"/> -->
     <!-- <h1>{{users}}</h1> -->
     <!-- <Child v-on:changeUsers="updateUsers($event)"/> -->
-    <Signup/>
-    
-    
-   
-  </div>
+    <!-- <Signup/> -->
+    <!-- <Login/> --> 
+        <!-- <Form /> -->
+     <!-- <Filters /> -->
+     <EmployeeList/>
+      <Post/>
+    </div>
 </template>
 
 <script>
+import EmployeeList from './components/EmployeeList'
+// import Form from './components/Form'
 // import HelloWorld from './components/HelloWorld.vue'
 // import Home from './components/Home.vue'
 // import Props from './components/Props.vue'
@@ -28,13 +32,22 @@
 // import Classstyle from './components/Classstyle'
 // import DataBind from './components/DataBind'
 // import Child from './components/Child.vue'
-import Signup from './components/Signup'
- 
+// import Signup from './components/Signup'
+// import Login from './components/Login'
+   
+//  import Filters from './components/Filters'
+import Post from './components/Post'
 
 export default {
   name: 'App',
   components: {
-      Signup
+    EmployeeList,
+    Post
+    // Form 
+    // Filters
+     
+    // Login
+      // Signup
     // Child
     // HelloWorld,
     // Home,
