@@ -1,0 +1,5 @@
+install vue package = npm install vue router
+import component
+make routers
+Register router
+Test

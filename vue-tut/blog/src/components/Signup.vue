@@ -1,5 +1,6 @@
 <template>
     <div>
+         <h1>signup component</h1>
         <input type="text" name="" placeholder="enter your name" v-model="signup.username"/> <br><br>
         <input type="password" name="" placeholder="password"  v-model="signup.password"/><br><br>
         <p>Chosse your Hobbies</p>

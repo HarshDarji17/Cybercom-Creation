@@ -1,6 +1,15 @@
 <template>
 <div>
+    
      <h1>hello from home component</h1>
+
+      <!-- fake userllist -->
+<div>
+      <p><router-link to="user/1">HArsh</router-link></p>
+      <p><router-link to="user/2">Navneet</router-link></p>
+      <p><router-link to="user/3">dhruv</router-link></p>
+      <p><router-link to="user/4">ass</router-link></p>
+      </div>
      
          <!-- event -->
       <button v-on:click="hello(data)">call helllo function</button>

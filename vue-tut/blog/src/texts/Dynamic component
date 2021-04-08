@@ -1,0 +1,5 @@
+make 2 component
+user and product
+import in app.vue
+use component tag for show component
+change component with btn click
