@@ -1,29 +1,47 @@
 import { Component, OnInit } from '@angular/core';
+import { count } from 'rxjs/operators';
 
 @Component({
   selector: 'app-parent',
   templateUrl: './parent.component.html',
   styleUrls: ['./parent.component.css']
 })
-export class ParentComponent  {
+export class ParentComponent implements OnInit {
+   users:any = [];
+   count=''
+   // for Users
+  //  pushUsers(data:any){
+  //    console.log(data);
+  //    this.users.push(data);
+  //    console.log(this.users)
 
-  // for Users
-  users =[];
-  pushUsers(data){
+  // }
+ 
+  // users =[];
+  pushUsers(data:any){
     this.users.push(data);
   }
   onRemoveUsers(item:any){
     this.users.splice(item, 1)
+  
   }
+  
+
+  
+      
 
   // for Admins
-  admins =[];
-  pushAdmins(data){
+  admins :any =[];
+  pushAdmins(data:any){
     this.admins.push(data);
   }
-  onRemoveAdmins(item:any){
+  onRemoveAdmins(item: number){
     this.admins.splice(item, 1)
   }
- 
+
+  ngOnInit():void{
+    this.count=this.users.length;
+    console.log(count);
+  } 
 
 }
