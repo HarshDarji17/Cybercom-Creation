@@ -12,6 +12,10 @@
             <td>{{user.name}}</td>
             <td>{{user.email}}</td>
         </tr>
+        <tr v-for="(user , index) in users" :key="user">
+            {{ index}} {{ user.name}}  {{user.email}}
+
+        </tr>
     </table>
     </div>
    

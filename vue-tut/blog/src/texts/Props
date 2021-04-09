@@ -3,3 +3,9 @@ make a component
 define Props
 Pass Props
 Acess Props
+defind type
+
+*Non Props
+-not defind types
+-static
+-rarely use

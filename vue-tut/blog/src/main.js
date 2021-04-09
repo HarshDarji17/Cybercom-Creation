@@ -68,6 +68,9 @@ const router = new  VueRouter({
   routes
 })
 
+//vuelidate in vue js
+Vue.use(Vuelidate);
+
 
 Vue.config.productionTip = false
 Vue.filter("Ucase" , function(val){
@@ -78,7 +81,7 @@ Vue.filter("currencyConverter" , function(val){
   return val*75
 })
 
-Vue.use(Vuelidate);
+
 new Vue({
   router:router,
   render: h => h(App),

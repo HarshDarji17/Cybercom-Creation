@@ -1,8 +1,37 @@
 <template>
+
   <div id="app">
-  
+<!--     
+    <Props v-bind:users="users" />
+   <DataBind data=" databind"/> -->
+   <Props data="some data" id="user-cmp"/> 
+   <Ref/> 
+  <Card></Card>
+    <Card> Card Content </Card>
+    <Card><h2> Card Content</h2></Card>
+   
+     <Card>  <img src="https://picsum.photos/200"/> </Card>
+   
+
+      <!-- Name slot -->
+   <Card>
+     <template v-slot:header>
+       <h3>Header</h3>
+     </template>
+
+     <template v-slot:default='slotProp'>
+                {{ slotProp.firstName }} {{ slotProp.lastName }}
+            </template>
+     
+     <template v-slot:footer>
+       <button> View Details</button>
+     </template>
+
+   </Card>
+
 <div>
-  <b-navbar toggleable="lg" type="dark" variant="info">
+  
+  <!-- <b-navbar toggleable="lg" type="dark" variant="info">
     <b-navbar-brand href="#">Vue js </b-navbar-brand>
 
     <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
@@ -35,23 +64,16 @@
 
       
     </b-collapse>
-  </b-navbar>
+  </b-navbar> -->
 </div>
   
 
-    <!-- <img alt="Vue logo" src="./assets/logo.png"> -->
-   <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
-    <!-- <Home  data="Harsh Darji"/> -->
-    <Props v-bind:users="users" />
-    
-    
-   <!-- <Template data="" /> -->
-   
-   
-     <DataBind data=" databind"/>
+          
   
-    <h1>{{users}}</h1>
-     <Child v-on:changeUsers="updateUsers($event)"/> -->
+      <!-- chhildvue -->
+
+    <!-- <h1>{{users}}</h1>
+     <Child v-on:changeUsers="updateUsers($event)"/> --> -->
     
    
     
@@ -61,11 +83,17 @@
 
 <script>
 
-
+import Card from './components/Card.vue'
+import Ref from './components/Ref.vue'
+import Props from './components/Props'
 
 export default {
   name: 'App',
-  components: {},
+  components: {
+    Card,
+    Ref,
+    Props
+  },
   data()
   {
 

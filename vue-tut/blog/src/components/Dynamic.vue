@@ -2,7 +2,7 @@
     <div>
         <h1>Dynamic Component</h1>
         <component v-bind:is="cmp"></component>
-        <button v-on:click="updateCmp('signin')">Load signin</button>
+        <button @click="updateCmp('signin')">Load signin</button>
         <button v-on:click="updateCmp('signup')">Load signup</button>
     </div>
 </template>

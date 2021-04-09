@@ -6,12 +6,19 @@
             {{user.id}} -- {{user.name}}
 
         </h3>
+          <!-- non props -->
+       
+        <h3 v-bind="$attrs">peter</h3>
+        <h3>malain</h3>
+        <h3>kitry</h3>
+        <h3>{{data}}</h3>  
     </div>
 </template>
 <script>
 
 export default {
      name:'Props',
-     props:['users']
+     inheritAttrs:false,
+     props:['users' , 'data' , 'id:string']
 }
 </script>

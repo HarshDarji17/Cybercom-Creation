@@ -11,7 +11,7 @@ export default{
     name:"Classstyle",
     data(){
         return{
-            show:false,
+            show:true,
             aclass:'arrayClass',
             color:'red'
         }

@@ -14,9 +14,9 @@
         </label>
         <br><br>
          <p>Select Gender</p>
-         <input type="radio" value="male" id="male" v-model="signup.gender" />
+         <input type="radio" value="male" id="male" v-model.trim="signup.gender" />
          <label for="male"> Male</label>
-         <input type="radio" value="female" id="female" v-model="signup.gender" />
+         <input type="radio" value="female" id="female" v-model.trim="signup.gender" />
          <label for="male"> Female</label>
             <br><br>
          <button v-on:click="signupUser"> Sign Up</button>

@@ -1,0 +1,7 @@
+// remove to the white spaces
+ types
+1>trim = used form remove white spaces
+2>number = used the mumeric filed in form then use it
+3>Lazy = it is not immediately reflected in the form values object
+4>event.preventdefault= stop the page from refreshinng when you click.
+5>@keyup.enter= "submitForm" we can get the age data to press the enter key 
