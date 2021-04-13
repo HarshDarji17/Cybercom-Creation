@@ -1,22 +1,33 @@
 <template>
     <div class="users">
-         <h1 >helo from Products component</h1>
+         <h1 > Products component</h1>
+
+           <!-- mixins concept -->
+           <div>{{counter}}</div>
+           <button @click.prevent="onIncrement(5)"> Increment </button>
     </div>
 
 </template>
+
 <script>
+import CounterMixin from '../mixins/CounterMixin';
 export default {
-       name: 'Products'
+       name: 'Products',
+       mixins: [CounterMixin],
+       data() {
+           return {
+             counter:5,
+           };
+       },
+      
+mounted(){
+    console.log('mounted from product com')
 }
+      
+};
 </script>
+
+
+
 <style scoped>
-
-.users{
-    background-color: antiquewhite;
-    height: 100px;
-    width:300px;
-    padding: 42px;
-    margin: 20px;
-
-}
 </style>

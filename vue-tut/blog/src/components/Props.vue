@@ -18,7 +18,7 @@
 
 export default {
      name:'Props',
-     inheritAttrs:false,
+     inheritAttrs:true,
      props:['users' , 'data' , 'id:string']
 }
 </script>

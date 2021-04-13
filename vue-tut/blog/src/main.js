@@ -21,6 +21,7 @@ import PageNotFound from './components/PageNotFound'
 
 import Dynamic from './components/Dynamic'
 import Customdirectiv from './components/Customdirectiv'
+import GlobalMixin from './mixins/GlobalMixin';
 
 //build custoome diectives
 Vue.directive("size",{
@@ -70,6 +71,11 @@ const router = new  VueRouter({
 
 //vuelidate in vue js
 Vue.use(Vuelidate);
+
+// Global Mixin Concept 
+
+Vue.mixin(GlobalMixin);
+
 
 
 Vue.config.productionTip = false

@@ -1,20 +1,30 @@
 <template>
 
   <div id="app">
+
+    <Users/>
+    <hr>
+    <Products/>
 <!--     
-    <Props v-bind:users="users" />
-   <DataBind data=" databind"/> -->
-   <Props data="some data" id="user-cmp"/> 
-   <Ref/> 
-  <Card></Card>
+    <Props v-bind:users="users" /> -->
+   <!-- <DataBind data=" databind"/> -->
+   <!-- <Props v-bind:users="users" />
+   <Props data="some data" class="abc" id="user-cmp"/> 
+   -->
+<!-- 
+   <Ref/>  -->
+
+        <!-- slot -->
+  
+    <!-- <Card></Card>
     <Card> Card Content </Card>
     <Card><h2> Card Content</h2></Card>
    
-     <Card>  <img src="https://picsum.photos/200"/> </Card>
+     <Card>  <img src="https://picsum.photos/200"/> </Card> -->
    
 
       <!-- Name slot -->
-   <Card>
+   <!-- <Card>
      <template v-slot:header>
        <h3>Header</h3>
      </template>
@@ -27,11 +37,11 @@
        <button> View Details</button>
      </template>
 
-   </Card>
+   </Card> -->
 
 <div>
   
-  <!-- <b-navbar toggleable="lg" type="dark" variant="info">
+   <!-- <b-navbar toggleable="lg" type="dark" variant="info">
     <b-navbar-brand href="#">Vue js </b-navbar-brand>
 
     <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
@@ -64,7 +74,7 @@
 
       
     </b-collapse>
-  </b-navbar> -->
+  </b-navbar>  -->
 </div>
   
 
@@ -82,17 +92,23 @@
 </template>
 
 <script>
+import Products from './components/Products'
+import Users from './components/Users'
+// import Card from './components/Card.vue'
+// import Ref from './components/Ref.vue'
+// import Props from './components/Props'
 
-import Card from './components/Card.vue'
-import Ref from './components/Ref.vue'
-import Props from './components/Props'
+
 
 export default {
   name: 'App',
   components: {
-    Card,
-    Ref,
-    Props
+    Products,
+    Users
+    // Card,
+    // Ref,
+    // Props
+  
   },
   data()
   {
@@ -121,4 +137,5 @@ export default {
   color: #2c3e50;
   margin-top: 60px;
 }
+
 </style>
