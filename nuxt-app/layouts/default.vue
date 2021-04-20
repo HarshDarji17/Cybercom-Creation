@@ -9,6 +9,11 @@
             Weather App
           </n-link>
         </v-btn>
+        <v-btn>
+          <n-link to="/quiz">
+            Quiz App
+          </n-link>
+        </v-btn>
       </v-toolbar-items>
     </v-toolbar>
 
