@@ -16,16 +16,21 @@
            
              <!-- form -->
                <Form title=" Any Query then Connect with Us !" />
+               <abc />
+              
         </v-main>
 </template>
 
 <script>
 import Form from "./Form";
+import abc from "./abc";
+
 
 export default {
     name: "Home",
     components: {
-        Form
+        Form,
+        abc
         },
     data() {
         return {};

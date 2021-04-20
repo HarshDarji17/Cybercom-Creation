@@ -22,9 +22,9 @@
              <v-btn plain>
                 <router-link to="/signup" class="white--text" active-class="active" exact> Sign Up </router-link>
             </v-btn>
-            <v-btn plain>
-                <router-link to="/form-data" class="white--text" active-class="active" exact> Form Data </router-link>
-            </v-btn>
+            <!-- <v-btn plain>
+                <router-link to="/showdata" class="white--text" active-class="active" exact> Show Data </router-link>
+            </v-btn> -->
             <v-btn plain>
                 <router-link to="/contact-us" class="white--text" active-class="active" exact> Contact US </router-link>
             </v-btn>

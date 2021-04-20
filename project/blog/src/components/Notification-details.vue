@@ -76,7 +76,4 @@ export default {
     margin: 50px auto;
 }
 
-a {
-    text-decoration: none;
-}
 </style>

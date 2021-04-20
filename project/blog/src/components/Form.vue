@@ -77,11 +77,11 @@
                     </v-col>
 
                     <!-- image -->
-                    <v-col md="6" class="d-none d-md-block contact-box-img">
+                    <!-- <v-col md="6" class="d-none d-md-block contact-box-img">
                         <img
                             :src="require('@/assets/contact.png')"
                             alt="query-logo" />
-                    </v-col>
+                    </v-col> -->
 
                 </v-row>
             </v-container>
@@ -173,7 +173,7 @@ export default {
             this.$v.formData.$touch();
             this.data = JSON.parse(localStorage.getItem("data")) || [];
             this.data.push(this.formData);
-            localStorage.setItem("data", JSON.stringify(this.query));
+            localStorage.setItem("data", JSON.stringify(this.data));
             this.clear();
         },
         clear() {

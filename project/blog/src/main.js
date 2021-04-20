@@ -5,11 +5,12 @@ import vuetify from './plugins/vuetify';
 import Home from "./components/Home";
 import Notification from "./components/Notification";
 import contactUs from "./components/contact-us";
-import ShowData from "./components/show-data";
+// import showdata from "./components/ShowData";
 import NotificationDetails from "./components/Notification-details";
 import SignIn from "./components/SignIn";
 import SignUp from "./components/SignUp";
 import NotFound from "./components/NotFound";
+
 
 
 Vue.use(VueRouter);
@@ -18,7 +19,7 @@ const routes = [
     { path:"/signin" , component:SignIn},
     { path:"/signup" , component:SignUp},
     { path: "/contact-us", component: contactUs },
-    { path: "/showdata", component: ShowData },
+    //  {path:"/showdata" , component:showdata},
     { path: "/notification", component: Notification },
     { path: "/notification/:id", component: NotificationDetails },
     {path:"*" , component:NotFound}

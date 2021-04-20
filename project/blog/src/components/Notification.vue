@@ -10,8 +10,7 @@
                     
                     <!-- card -->
                     <v-card>
-
-                        <!-- image & title -->
+                       <!-- image & title -->
                         <v-img class="white--text align-end" :src="notification.image">
                             <v-card-title> {{ notification.title }} </v-card-title>
                         </v-img>
@@ -24,7 +23,7 @@
                         <!-- Notification details -->
                         <v-card-text class="text--primary">
                             <h3 class="title">{{ notification.quota }}</h3>
-                            <h3 class="body-2" v-trim>{{ notification.details }}</h3>
+                            <h3 class="body-2" >{{ notification.details }}</h3>
                         </v-card-text>
 
                         <!-- buttons -->
@@ -94,15 +93,15 @@ export default {
             ],
         };
     },
-    directives: {
-        trim: {
-            inserted: function (el) {
-                var str = el.innerHTML;
-                var resultString = str.substr(0, 100) + "...";
-                el.innerHTML = resultString
-            }
-        }
-    }
+    // directives: {
+    //     trim: {
+    //         inserted: function (el) {
+    //             var str = el.innerHTML;
+    //             var resultString = str.substr(0, 100) + "...";
+    //             el.innerHTML = resultString
+    //         }
+    //     }
+    // }
     
     
     }
