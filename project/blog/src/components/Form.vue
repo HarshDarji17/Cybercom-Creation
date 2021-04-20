@@ -76,12 +76,7 @@
                         <v-btn @click="clear" color="warning"> clear </v-btn>
                     </v-col>
 
-                    <!-- image -->
-                    <!-- <v-col md="6" class="d-none d-md-block contact-box-img">
-                        <img
-                            :src="require('@/assets/contact.png')"
-                            alt="query-logo" />
-                    </v-col> -->
+                   
 
                 </v-row>
             </v-container>
